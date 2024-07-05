@@ -19,7 +19,7 @@ export default function Home() {
         <Button text="Let's Talk"></Button>
       </div>
 
-      <div className="flex justify-between gap-12 align-start px-20 pb-20">
+      <div className="flex justify-between gap-12 align-start px-20 pb-48">
         <div className="flex flex-col w-[28%] items-center gap-4 [&>*]:text-center">
           <h3 className="text-3xl">Share your vision</h3>
           <p>Meet with me and tell me about your business goals.</p>
@@ -34,17 +34,40 @@ export default function Home() {
         </div>
       </div>
 
-      <div id="ABOUT" className="flex h-[70vh] my-20">
+      <div id="ABOUT" className="flex h-[70vh] my-36">
         <div className="relative w-3/5 h-full">
-          <div className="bg-success absolute top-0 -left-48 z-0 w-[75%] h-full rounded-3xl"></div>
+          <div className="bg-success opacity-75 absolute top-0 -left-48 z-0 w-[75%] h-full rounded-3xl"></div>
           <Image className="z-2 absolute top-20 left-48 rounded-3xl w-[60%]" src={profile}></Image>
         </div>
-        <div className="flex flex-col w-2/5 h-full justify-center gap-4">
-          <h3 className="text-4xl">About me</h3>
-          <p className="w-[70%]">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A quas nostrum voluptas temporibus repellat eligendi tempora consectetur veritatis ea unde.</p>
+        <div className="flex flex-col w-2/5 h-full justify-center gap-4 pr-[8%]">
+          <h3 className="text-6xl">About me</h3>
+          <p className="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A quas nostrum voluptas temporibus repellat eligendi tempora consectetur veritatis ea unde.</p>
           <div>social media</div>
         </div>
       </div>
+
+
+      <div id="WEBSITE DESIGN" className="flex h-[70vh] my-36">
+        <div className="flex flex-col w-2/5 h-full justify-center gap-8 pl-[8%]">
+          <div className="flex flex-col gap-4">
+            <h3 className="text-6xl">Website Design Services</h3>
+            <p className="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A quas nostrum voluptas temporibus repellat eligendi tempora consectetur veritatis ea unde.</p>
+          </div>
+          <div className="flex flex-col gap-4">
+            <h3 className="text-4xl">From CA$499.99</h3>
+            <p className="text-sm">Negotiable, one-time payment</p>
+            <Button text={"Let's Talk"}></Button>
+          </div>
+        </div>
+        <div className="relative w-3/5 h-full">
+          <div className="bg-secondary opacity-50 absolute top-0 -right-48 z-0 w-[75%] h-full rounded-3xl"></div>
+          <div className="bg-secondary opacity-50 absolute top-0 -right-48 z-0 w-[75%] h-full rounded-3xl"></div>
+          <Image className="z-2 absolute top-20 right-48 rounded-3xl w-[60%]" src={profile}></Image>
+        </div>
+      </div>
+
+
+      
 
 
     </main>
