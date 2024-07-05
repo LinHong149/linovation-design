@@ -2,6 +2,10 @@ import Image from "next/image";
 import logo from "../public/logo.png"
 import profile from "../public/Hong_Lin.png"
 import website_design from "../public/website_design.png"
+import graphic_design from "../public/graphic_design.png"
+import canva from "../public/canva.png"
+import photoshop from "../public/photoshop.png"
+import figma from "../public/figma.png"
 import "./globals.css";
 
 import Button from "./components/button"
@@ -63,15 +67,35 @@ export default function Home() {
         <div className="relative w-3/5 h-full">
           <div className="bg-secondary opacity-50 absolute top-0 -right-48 z-0 w-[75%] h-full rounded-3xl"></div>
           <Image className="z-1 absolute top-20 right-12 rounded-3xl w-[70%] shadow-xl" src={website_design}></Image>
-          <div className="bg-neutral absolute top-96 right-[20rem] z-2 w-fit h-fit rounded-3xl p-12">
+          <div className="bg-neutral absolute top-96 right-[20rem] z-2 w-fit h-fit rounded-3xl p-12  shadow-xl">
             <p>h</p>
           </div>
         </div>
       </div>
 
 
-
-
+      <div id="GRAPHIC DESIGN" className="flex h-[70vh] my-36">
+        <div className="relative w-3/5 h-full">
+          <div className="bg-info opacity-75 absolute top-0 -left-48 z-0 w-[75%] h-full rounded-3xl"></div>
+          <Image className="z-1 absolute top-20 left-20 rounded-3xl w-[75%]  shadow-xl" src={graphic_design}></Image>
+          <div className="bg-white absolute top-[30rem] left-52 z-2 w-fit h-fit rounded-3xl shadow-xl flex p-8 gap-8">
+            <Image className="w-24 aspect-square rounded-3xl shadow-xl" src={photoshop}/>
+            <Image className="w-24 aspect-square rounded-3xl shadow-xl" src={figma}/>
+            <Image className="w-24 aspect-square rounded-3xl shadow-xl" src={canva}/>
+          </div>
+        </div>
+        <div className="flex flex-col w-2/5 h-full justify-center gap-8 pr-[8%]">
+          <div className="flex flex-col gap-4">
+            <h3 className="text-6xl">Graphic Design Services</h3>
+            <p className="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A quas nostrum voluptas temporibus repellat eligendi tempora consectetur veritatis ea unde.</p>
+          </div>
+          <div className="flex flex-col gap-4">
+            <h3 className="text-4xl">From CA$499.99</h3>
+            <p className="text-sm">Negotiable, one-time payment</p>
+            <Button text={"Let's Talk"}></Button>
+          </div>
+        </div>
+      </div>
 
 
       
