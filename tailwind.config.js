@@ -6,6 +6,17 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    mytheme: {
+      "primary": "#dbf1ff",
+      "secondary": "#ffacff",
+      "accent": "#43ffff",
+      "neutral": "#f6ffff",
+      "base-100": "#f8ffff",
+      "info": "#41ffff",
+      "success": "#9affdc",
+      "warning": "#fff129",
+      "error": "#ffbab9",
+    },
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -14,5 +25,7 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('daisyui'),
+  ],
 };
