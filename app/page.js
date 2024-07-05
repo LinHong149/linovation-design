@@ -34,17 +34,19 @@ export default function Home() {
         </div>
       </div>
 
-      <div id="ABOUT" className="flex max-h-[70vh]">
-        <div className="relative">
-          <div className="bg w-full h-full"></div>
-          <Image className="" src={profile}></Image>
+      <div id="ABOUT" className="flex h-[70vh] my-20">
+        <div className="relative w-3/5 h-full">
+          <div className="bg-success absolute top-0 -left-48 z-0 w-[75%] h-full rounded-3xl"></div>
+          <Image className="z-2 absolute top-20 left-48 rounded-3xl w-[60%]" src={profile}></Image>
         </div>
-        <div className="flex flex-col">
-          <h3 className="text-3xl">About me</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A quas nostrum voluptas temporibus repellat eligendi tempora consectetur veritatis ea unde.</p>
+        <div className="flex flex-col w-2/5 h-full justify-center gap-4">
+          <h3 className="text-4xl">About me</h3>
+          <p className="w-[70%]">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A quas nostrum voluptas temporibus repellat eligendi tempora consectetur veritatis ea unde.</p>
           <div>social media</div>
         </div>
       </div>
+
+
     </main>
   );
 }
