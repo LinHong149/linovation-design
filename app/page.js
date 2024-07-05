@@ -90,7 +90,7 @@ export default function Home() {
             <p className="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A quas nostrum voluptas temporibus repellat eligendi tempora consectetur veritatis ea unde.</p>
           </div>
           <div className="flex flex-col gap-4">
-            <h3 className="text-4xl">From CA$499.99</h3>
+            <h3 className="text-4xl">From CA$299.99</h3>
             <p className="text-sm">Negotiable, one-time payment</p>
             <Button text={"Let's Talk"}></Button>
           </div>
