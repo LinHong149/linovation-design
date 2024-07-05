@@ -1,13 +1,14 @@
 import Image from "next/image";
 import logo from "../public/logo.png"
 import profile from "../public/Hong_Lin.png"
+import website_design from "../public/website_design.png"
 import "./globals.css";
 
 import Button from "./components/button"
 
 export default function Home() {
   return (
-    <main className="flex flex-col px-24 py-10">
+    <main className="flex flex-col px-24 py-10 overflow-hidden">
       <div id="NAVBAR" className="w-full h-fit flex justify-between">
         <Image className="w-[8rem] object-contain" src={logo}></Image>
         <Button text="Let's Talk"></Button>
@@ -37,7 +38,7 @@ export default function Home() {
       <div id="ABOUT" className="flex h-[70vh] my-36">
         <div className="relative w-3/5 h-full">
           <div className="bg-success opacity-75 absolute top-0 -left-48 z-0 w-[75%] h-full rounded-3xl"></div>
-          <Image className="z-2 absolute top-20 left-48 rounded-3xl w-[60%]" src={profile}></Image>
+          <Image className="z-2 absolute top-20 left-48 rounded-3xl w-[60%]  shadow-xl" src={profile}></Image>
         </div>
         <div className="flex flex-col w-2/5 h-full justify-center gap-4 pr-[8%]">
           <h3 className="text-6xl">About me</h3>
@@ -61,10 +62,16 @@ export default function Home() {
         </div>
         <div className="relative w-3/5 h-full">
           <div className="bg-secondary opacity-50 absolute top-0 -right-48 z-0 w-[75%] h-full rounded-3xl"></div>
-          <div className="bg-secondary opacity-50 absolute top-0 -right-48 z-0 w-[75%] h-full rounded-3xl"></div>
-          <Image className="z-2 absolute top-20 right-48 rounded-3xl w-[60%]" src={profile}></Image>
+          <Image className="z-1 absolute top-20 right-12 rounded-3xl w-[70%] shadow-xl" src={website_design}></Image>
+          <div className="bg-neutral absolute top-96 right-[20rem] z-2 w-fit h-fit rounded-3xl p-12">
+            <p>h</p>
+          </div>
         </div>
       </div>
+
+
+
+
 
 
       
