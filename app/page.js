@@ -3,6 +3,7 @@ import logo from "../public/logo.png"
 import profile from "../public/Hong_Lin.png"
 import website_design from "../public/website_design.png"
 import graphic_design from "../public/graphic_design.png"
+import seo from "../public/seo.png"
 import canva from "../public/canva.png"
 import photoshop from "../public/photoshop.png"
 import figma from "../public/figma.png"
@@ -41,7 +42,7 @@ export default function Home() {
 
       <div id="ABOUT" className="flex h-[70vh] my-36">
         <div className="relative w-3/5 h-full">
-          <div className="bg-success opacity-75 absolute top-0 -left-48 z-0 w-[75%] h-full rounded-3xl"></div>
+          <div className="bg-warning opacity-50 absolute top-0 -left-48 z-0 w-[75%] h-full rounded-3xl"></div>
           <Image className="z-2 absolute top-20 left-48 rounded-3xl w-[60%]  shadow-xl" src={profile}></Image>
         </div>
         <div className="flex flex-col w-2/5 h-full justify-center gap-4 pr-[8%]">
@@ -97,6 +98,24 @@ export default function Home() {
         </div>
       </div>
 
+
+      <div id="SEO OPTIMIZATION" className="flex h-[70vh] my-36">
+        <div className="flex flex-col w-2/5 h-full justify-center gap-8 pl-[8%]">
+          <div className="flex flex-col gap-4">
+            <h3 className="text-6xl">SEO Optimization Services</h3>
+            <p className="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A quas nostrum voluptas temporibus repellat eligendi tempora consectetur veritatis ea unde.</p>
+          </div>
+          <div className="flex flex-col gap-4">
+            <h3 className="text-4xl">From CA$399.99</h3>
+            <p className="text-sm">Negotiable, one-time payment</p>
+            <Button text={"Let's Talk"}></Button>
+          </div>
+        </div>
+        <div className="relative w-3/5 h-full">
+          <div className="bg-success opacity-50 absolute top-0 -right-48 z-0 w-[75%] h-full rounded-3xl"></div>
+          <Image className="z-1 absolute top-32 right-12 rounded-3xl w-[75%] aspect-[5/4] object-cover shadow-xl" src={seo}></Image>
+        </div>
+      </div>
 
       
 
