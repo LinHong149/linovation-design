@@ -140,6 +140,30 @@ export default function Home() {
         </div>
       </div>
 
+      <div id="features" className="w-screen bg-[#111418] -mx-24 px-24 py-20 flex flex-col gap-8">
+        <div className="flex w-full gap-8">
+          <div className="rounded-3xl shadow-xl bg-[#FEDF80] p-12">
+            <h3 className="text-7xl">Transforming your ideas into stunning visuals.</h3>
+          </div>
+          <div className="rounded-3xl shadow-xl bg-[#FF9EEC] p-12">
+            <h3 className="text-5xl">Timely deliver</h3>
+            <p>My flexible schedule works for you.</p>
+            <Button text={"Chat Anytime"}></Button>
+          </div>
+        </div>
+
+        <div className="flex w-full gap-8">
+          <div className="rounded-3xl shadow-xl bg-[#FEDF80] p-12">
+            <h3 className="text-7xl">Transforming your ideas into stunning visuals.</h3>
+          </div>
+          <div className="rounded-3xl shadow-xl bg-[#FF9EEC] p-12">
+            <h3 className="text-5xl">Timely deliver</h3>
+            <p>My flexible schedule works for you.</p>
+            <Button text={"Chat Anytime"}></Button>
+          </div>
+        </div>
+      </div>
+
 
       
 
