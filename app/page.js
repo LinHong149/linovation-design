@@ -11,6 +11,7 @@ import figma from "../public/figma.png"
 import "./globals.css";
 
 import Button from "./components/button"
+import Dropdown from "./components/dropdown"
 
 export default function Home() {
   return (
@@ -152,7 +153,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex w-full gap-10">
+        <div id="FEATURES" className="flex w-full gap-10">
           <div className="flex-1 flex flex-col gap-4 rounded-3xl shadow-xl bg-[#3EC7FF] p-12">
             <h3 className="text-5xl">Affordable Rates</h3>
             <p>Premium design services that won't break the bank.</p>
@@ -166,6 +167,21 @@ export default function Home() {
             <p>An iterative process that values your input at every stage.</p>
           </div>
         </div>
+      </div>
+
+      <div id="FAQ" className="w-full flex flex-col items-center py-48 gap-16">
+        <h2 className="text-5xl w-fit">Frequently Asked Questions</h2>
+
+        <div className="flex flex-col gap-6 w-[50%] min-w-[50rem]">
+          <Dropdown defaultChecked={false} question={"Lorem ipsum dolor sit amet consectetur?"} answer={"Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, numquam in expedita doloremque exercitationem alias? Ipsum dolor sit amet consectetur adipisicing elit. Dolorum, numquam in expedita doloremque exercitationem alias?"}></Dropdown>
+          <hr className="w-full border-black" />
+          <Dropdown defaultChecked={false} question={"Lorem ipsum dolor sit amet consectetur?"} answer={"Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, numquam in expedita doloremque exercitationem alias? Ipsum dolor sit amet consectetur adipisicing elit. Dolorum, numquam in expedita doloremque exercitationem alias?"}></Dropdown>
+          <hr className="w-full border-black" />
+          <Dropdown defaultChecked={false} question={"Lorem ipsum dolor sit amet consectetur?"} answer={"Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, numquam in expedita doloremque exercitationem alias? Ipsum dolor sit amet consectetur adipisicing elit. Dolorum, numquam in expedita doloremque exercitationem alias?"}></Dropdown>
+          <hr className="w-full border-black" />
+          <Dropdown defaultChecked={false} question={"Lorem ipsum dolor sit amet consectetur?"} answer={"Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, numquam in expedita doloremque exercitationem alias? Ipsum dolor sit amet consectetur adipisicing elit. Dolorum, numquam in expedita doloremque exercitationem alias?"}></Dropdown>
+        </div>
+
       </div>
 
 
