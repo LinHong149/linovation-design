@@ -140,28 +140,28 @@ export default function Home() {
         </div>
       </div>
 
-      <div id="features" className="w-screen bg-[#111418] [&>*]:text-[#111418] -mx-24 px-24 py-20 flex flex-col gap-8">
-        <div className="flex w-full gap-8">
-          <div className="rounded-3xl shadow-xl bg-[#FEDF80] p-12">
+      <div id="features" className="w-screen bg-[#111418] [&>*]:text-[#111418] -mx-24 my-48 px-32 py-48 flex flex-col gap-14 min-h-screen flex flex-col items-center justify-center">
+        <div className="flex w-full gap-10">
+          <div className="flex-[5] flex flex-col gap-4 rounded-3xl shadow-xl bg-[#FEDF80] p-12">
             <h3 className="text-7xl">Transforming your ideas into stunning visuals.</h3>
           </div>
-          <div className="rounded-3xl shadow-xl bg-[#FF9EEC] p-12">
+          <div className="flex-[3] flex flex-col gap-4 rounded-3xl shadow-xl bg-[#FF9EEC] p-12">
             <h3 className="text-5xl">Timely delivery</h3>
             <p>Ensuring your projects are completed on time, every time.</p>
             <Button text={"Chat Anytime"}></Button>
           </div>
         </div>
 
-        <div className="flex w-full gap-8">
-          <div className="rounded-3xl shadow-xl bg-[#3EC7FF] p-12">
+        <div className="flex w-full gap-10">
+          <div className="flex-1 flex flex-col gap-4 rounded-3xl shadow-xl bg-[#3EC7FF] p-12">
             <h3 className="text-5xl">Affordable Rates</h3>
             <p>Premium design services that won't break the bank.</p>
           </div>
-          <div className="rounded-3xl shadow-xl bg-[#8ED6B7] p-12">
+          <div className="flex-1 flex flex-col gap-4 rounded-3xl shadow-xl bg-[#8ED6B7] p-12">
             <h3 className="text-5xl">Versatile Expertise</h3>
             <p>Expertise across various design disciplines to meet your unique needs.</p>
           </div>
-          <div className="rounded-3xl shadow-xl bg-[#FF7B8A] p-12">
+          <div className="flex-1 flex flex-col gap-4 rounded-3xl shadow-xl bg-[#FF7B8A] p-12">
             <h3 className="text-5xl">Feedback Process</h3>
             <p>An iterative process that values your input at every stage.</p>
           </div>
