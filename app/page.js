@@ -1,4 +1,5 @@
 import Image from "next/image";
+
 import logo from "../public/logo.png"
 import profile from "../public/Hong_Lin.png"
 import website_design from "../public/website_design.png"
@@ -12,6 +13,12 @@ import "./globals.css";
 
 import Button from "./components/button"
 import Dropdown from "./components/dropdown"
+
+import '@fortawesome/fontawesome-svg-core/styles.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInstagram } from '@fortawesome/free-brands-svg-icons';
+
+
 
 export default function Home() {
   return (
@@ -170,7 +177,7 @@ export default function Home() {
       </div>
 
       <div id="FAQ" className="w-full flex flex-col items-center py-48 gap-16">
-        <h2 className="text-5xl w-fit">Frequently Asked Questions</h2>
+        <h2 className="text-4xl w-fit">Frequently Asked Questions</h2>
 
         <div className="flex flex-col gap-6 w-[50%] min-w-[50rem]">
           <Dropdown defaultChecked={false} question={"Lorem ipsum dolor sit amet consectetur?"} answer={"Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, numquam in expedita doloremque exercitationem alias? Ipsum dolor sit amet consectetur adipisicing elit. Dolorum, numquam in expedita doloremque exercitationem alias?"}></Dropdown>
@@ -183,7 +190,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="w-full my-48 flex flex-col items-center gap-10">
+      <div className="w-full my-48 flex flex-col items-center gap-16">
         <h3 className="text-4xl">Ready to get started?</h3>
         <div className="flex gap-10">
           <div className="card bg-white w-96 shadow-xl">
@@ -204,16 +211,11 @@ export default function Home() {
           </div>
 
           <div className="card bg-white w-96 shadow-xl">
-            {/* <figure className="px-10 pt-10">
-              <img
-                src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-                alt="Shoes"
-                className="rounded-xl" />
-            </figure> */}
             <div className="card-body items-center text-center">
               <h2 className="card-title">Email me</h2>
               <p>Feel free to email me for inquiries or more information.</p>
-              <a href="https://mail.google.com/mail/u/0/?fs=1&to=lin@linovationdesign.com&su=&body=&bcc=&tf=cm" className="flex gap-2 p-4">
+              <a href="https://mail.google.com/mail/u/0/?fs=1&to=lin@linovationdesign.com&su=&body=&bcc=&tf=cm" className="flex gap-2 p-4 link link-hover">
+                <svg width="22" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" focusable="false"><path d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"  fill="#0075be"/></svg>
                 linlin.hong1@gmail.com
               </a>
             </div>
@@ -221,7 +223,7 @@ export default function Home() {
         </div>
       </div>
 
-      <footer className="footer footer-center bg-primary text-primary-content p-10 w-screen -mx-24">
+      <footer className="footer footer-center bg-primary text-primary-content p-10 w-screen -mx-24 mt-16">
         <aside>
           <Image className="w-[8rem] object-contain" src={logo}></Image>
         </aside>
@@ -233,42 +235,38 @@ export default function Home() {
         </nav>
         <nav>
           <div className="grid grid-flow-col gap-4">
-            <a>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
+            <a href="https://www.instagram.com/linovation_design/" target="_blank">
+              <svg 
+                xmlns="http://www.w3.org/2000/svg" 
                 width="24"
                 height="24"
-                viewBox="0 0 24 24"
+                viewBox="0 0 448 512"
                 className="fill-current">
-                <path
-                  d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
-              </svg>
+                  <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/>
+                </svg>
             </a>
-            <a>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                className="fill-current">
-                <path
-                  d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
-              </svg>
+            <a target="_blank">
+            <svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              width="24"
+              height="24"
+              viewBox="0 0 512 512"
+              className="fill-current">
+              <path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z"/>
+            </svg>
             </a>
-            <a>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                className="fill-current">
-                <path
-                  d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
-              </svg>
+            <a href="https://mail.google.com/mail/u/0/?fs=1&to=lin@linovationdesign.com&su=&body=&bcc=&tf=cm" target="_blank">
+            <svg
+              xmlns="http://www.w3.org/2000/svg" 
+              width="24"
+              height="24"
+              viewBox="0 0 512 512"
+              className="fill-current">
+              <path d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"/>
+            </svg>
             </a>
           </div>
         </nav>
-        <p>lin@linovationdesign.com</p>
         <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
       </footer>
 

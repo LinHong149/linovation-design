@@ -5,7 +5,7 @@ const button = ({text}) => {
   return (
     <div>
       {/* Open the modal using document.getElementById('ID').showModal() method */}
-      <button className="btn" onClick={()=>document.getElementById('click_x').showModal()}>{text}</button>
+      <button className="btn text-white" onClick={()=>document.getElementById('click_x').showModal()}>{text}</button>
       <dialog id="click_x" className="modal modal-bottom sm:modal-middle">
         <div className="modal-box bg-white">
           <h3 className="font-bold text-lg">Hello!</h3>
