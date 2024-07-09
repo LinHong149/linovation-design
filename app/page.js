@@ -14,12 +14,6 @@ import "./globals.css";
 import Button from "./components/button"
 import Dropdown from "./components/dropdown"
 
-import '@fortawesome/fontawesome-svg-core/styles.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInstagram } from '@fortawesome/free-brands-svg-icons';
-
-
-
 export default function Home() {
   return (
     <main className="flex flex-col px-24 pt-10 overflow-hidden">
@@ -74,13 +68,46 @@ export default function Home() {
             <Button text={"Let's Talk"}></Button>
           </div>
         </div>
-        <div className="relative w-3/5 h-full">
-          <div className="bg-secondary opacity-50 absolute top-0 -right-48 z-0 w-[75%] h-full rounded-3xl"></div>
-          <Image className="z-1 absolute top-20 right-12 rounded-3xl w-[70%] shadow-xl" src={website_design}></Image>
-          <div className="bg-neutral absolute top-96 right-[20rem] z-2 w-fit h-fit rounded-3xl p-12  shadow-xl">
-            <p>h</p>
-          </div>
+        <div className="relative w-3/5 h-full mt-12">
+        <div className="bg-secondary opacity-50 absolute top-0 -right-48 z-0 w-[75%] h-full rounded-3xl"></div>
+        <Image className="z-1 absolute top-20 right-12 rounded-3xl w-[70%] shadow-xl" src={website_design} alt="Website Design"></Image>
+        <div className="bg-neutral absolute top-96 right-[20rem] z-2 max-w-[30rem] rounded-3xl p-12 shadow-xl">
+          <ul className="text-white list-none">
+            <li className="flex mb-2 ">
+              <input type="checkbox" id="consultation" name="consultation" checked className="checkbox checkbox-sm mt-[0.1rem] mr-[0.2rem]" />
+              <label htmlFor="consultation" className="ml-2">Free, no-commitment consultation.</label>
+            </li>
+            <li className="flex mb-2 ">
+              <input type="checkbox" id="responsive" name="responsive" checked className="checkbox checkbox-sm mt-[0.1rem] mr-[0.2rem]" />
+              <label htmlFor="responsive" className="ml-2">Responsive design for desktop, laptop, and mobile.</label>
+            </li>
+            <li className="flex mb-2 ">
+              <input type="checkbox" id="pages" name="pages" checked className="checkbox checkbox-sm mt-[0.1rem] mr-[0.2rem]" />
+              <label htmlFor="pages" className="ml-2">Up to 8 website pages.</label>
+            </li>
+            <li className="flex mb-2 ">
+              <input type="checkbox" id="seo" name="seo" checked className="checkbox checkbox-sm mt-[0.1rem] mr-[0.2rem]" />
+              <label htmlFor="seo" className="ml-2">Standard SEO set up.</label>
+            </li>
+            <li className="flex mb-2 ">
+              <input type="checkbox" id="designs" name="designs" checked className="checkbox checkbox-sm mt-[0.1rem] mr-[0.2rem]" />
+              <label htmlFor="designs" className="ml-2">Attractive designs tailored to your business.</label>
+            </li>
+            <li className="flex mb-2 ">
+              <input type="checkbox" id="prices" name="prices" checked className="checkbox checkbox-sm mt-[0.1rem] mr-[0.2rem]" />
+              <label htmlFor="prices" className="ml-2">Flexible prices.</label>
+            </li>
+            <li className="flex mb-2 ">
+              <input type="checkbox" id="iterative" name="iterative" checked className="checkbox checkbox-sm mt-[0.1rem] mr-[0.2rem]" />
+              <label htmlFor="iterative" className="ml-2">Iterative design process valuing your feedback.</label>
+            </li>
+            <li className="flex mb-2 ">
+              <input type="checkbox" id="features" name="features" checked className="checkbox checkbox-sm mt-[0.1rem] mr-[0.2rem]" />
+              <label htmlFor="features" className="ml-2">Advanced features such as video headers, image sliders, and galleries.</label>
+            </li>
+          </ul>
         </div>
+      </div>
       </div>
 
 
@@ -131,9 +158,6 @@ export default function Home() {
         <div className="relative w-3/5 h-full">
           <div className="bg-error opacity-75 absolute top-0 -left-48 z-0 w-[75%] h-full rounded-3xl"></div>
           <Image className="z-1 absolute top-20 left-20 rounded-3xl w-[75%] aspect-[5/4] object-cover object-bottom shadow-xl" src={development}></Image>
-          <div className="bg-white absolute top-[30rem] left-52 z-2 w-fit h-fit rounded-3xl shadow-xl flex p-8 gap-8">
-            asd
-          </div>
         </div>
         <div className="flex flex-col w-2/5 h-full justify-center gap-8 pr-[8%]">
           <div className="flex flex-col gap-4">
