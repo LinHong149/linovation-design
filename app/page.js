@@ -13,6 +13,7 @@ import "./globals.css";
 
 import Button from "./components/button"
 import Dropdown from "./components/dropdown"
+import Socials from "./components/socials"
 
 export default function Home() {
   return (
@@ -24,7 +25,7 @@ export default function Home() {
 
       <div id="HERO" className="flex flex-col w-full gap-8 items-center [&>*]:text-center py-48">
         <h1 className="w-fit text-8xl leading-[8rem]">Hi, My name's Lin. <br/> A freelance designer.</h1>
-        <h2 className="w-fit text-2xl">Let's transform your visions into a reality.</h2>
+        <h2 className="w-fit text-2xl">I'm dedicated to transforming your visions into reality.</h2>
         <Button text="Let's Talk"></Button>
       </div>
 
@@ -50,8 +51,8 @@ export default function Home() {
         </div>
         <div className="flex flex-col w-2/5 h-full justify-center gap-4 pr-[8%]">
           <h3 className="text-6xl">About me</h3>
-          <p className="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A quas nostrum voluptas temporibus repellat eligendi tempora consectetur veritatis ea unde.</p>
-          <div>social media</div>
+          <p className="">Hi, I’m Lin, a dedicated freelance designer focused on helping you create a unique and compelling brand. <br /> <br /> I transform your visions into reality with stunning websites, eye-catching graphics, and robust development solutions. <br /> <br />Let’s collaborate to bring your brand to life.</p>
+          <Socials size={24}/>
         </div>
       </div>
 
@@ -60,18 +61,18 @@ export default function Home() {
         <div className="flex flex-col w-2/5 h-full justify-center gap-8 pl-[8%]">
           <div className="flex flex-col gap-4">
             <h3 className="text-6xl">Website Design Services</h3>
-            <p className="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A quas nostrum voluptas temporibus repellat eligendi tempora consectetur veritatis ea unde.</p>
+            <p className="">Transform your online presence with a custom, responsive website that captures your brand’s essence and engages your audience.</p>
           </div>
           <div className="flex flex-col gap-4">
             <h3 className="text-4xl">From CA$499.99</h3>
-            <p className="text-sm">Negotiable, one-time payment</p>
+            <p className="text-sm">Negotiable Prices</p>
             <Button text={"Let's Talk"}></Button>
           </div>
         </div>
         <div className="relative w-3/5 h-full mt-12">
         <div className="bg-secondary opacity-50 absolute top-0 -right-48 z-0 w-[75%] h-full rounded-3xl"></div>
         <Image className="z-1 absolute top-20 right-12 rounded-3xl w-[70%] shadow-xl" src={website_design} alt="Website Design"></Image>
-        <div className="bg-neutral absolute top-96 right-[20rem] z-2 max-w-[30rem] rounded-3xl p-12 shadow-xl">
+        <div className="bg-neutral absolute top-72 right-[20rem] z-2 max-w-[30rem] rounded-3xl p-12 shadow-xl">
           <ul className="text-white list-none">
             <li className="flex mb-2 ">
               <input type="checkbox" id="consultation" name="consultation" checked className="checkbox checkbox-sm mt-[0.1rem] mr-[0.2rem]" />
@@ -124,11 +125,11 @@ export default function Home() {
         <div className="flex flex-col w-2/5 h-full justify-center gap-8 pr-[8%]">
           <div className="flex flex-col gap-4">
             <h3 className="text-6xl">Graphic Design Services</h3>
-            <p className="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A quas nostrum voluptas temporibus repellat eligendi tempora consectetur veritatis ea unde.</p>
+            <p className="">Elevate your brand’s visual identity with stunning graphics that communicate your message and leave a lasting impression.</p>
           </div>
           <div className="flex flex-col gap-4">
             <h3 className="text-4xl">From CA$299.99</h3>
-            <p className="text-sm">Negotiable, one-time payment</p>
+            <p className="text-sm">Negotiable Prices</p>
             <Button text={"Let's Talk"}></Button>
           </div>
         </div>
@@ -139,11 +140,11 @@ export default function Home() {
         <div className="flex flex-col w-2/5 h-full justify-center gap-8 pl-[8%]">
           <div className="flex flex-col gap-4">
             <h3 className="text-6xl">SEO Optimization Services</h3>
-            <p className="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A quas nostrum voluptas temporibus repellat eligendi tempora consectetur veritatis ea unde.</p>
+            <p className="">Boost your website’s visibility and attract more traffic with tailored SEO strategies that drive results.</p>
           </div>
           <div className="flex flex-col gap-4">
             <h3 className="text-4xl">From CA$399.99</h3>
-            <p className="text-sm">Negotiable, one-time payment</p>
+            <p className="text-sm">Negotiable Prices</p>
             <Button text={"Let's Talk"}></Button>
           </div>
         </div>
@@ -162,11 +163,11 @@ export default function Home() {
         <div className="flex flex-col w-2/5 h-full justify-center gap-8 pr-[8%]">
           <div className="flex flex-col gap-4">
             <h3 className="text-6xl">Development Services</h3>
-            <p className="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A quas nostrum voluptas temporibus repellat eligendi tempora consectetur veritatis ea unde.</p>
+            <p className="">Bring your ideas to life with robust, scalable development solutions that meet your business needs and exceed expectations.</p>
           </div>
           <div className="flex flex-col gap-4">
             <h3 className="text-4xl">From CA$799.99</h3>
-            <p className="text-sm">Negotiable, one-time payment</p>
+            <p className="text-sm">Negotiable Prices</p>
             <Button text={"Let's Talk"}></Button>
           </div>
         </div>
@@ -204,17 +205,36 @@ export default function Home() {
         <h2 className="text-4xl w-fit">Frequently Asked Questions</h2>
 
         <div className="flex flex-col gap-6 w-[50%] min-w-[50rem]">
-          <Dropdown defaultChecked={false} question={"Lorem ipsum dolor sit amet consectetur?"} answer={"Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, numquam in expedita doloremque exercitationem alias? Ipsum dolor sit amet consectetur adipisicing elit. Dolorum, numquam in expedita doloremque exercitationem alias?"}></Dropdown>
+          <Dropdown defaultChecked={false} 
+            question={"What is the process for starting a project with you?"} 
+            answer={"We begin with a free consultation to discuss your needs and goals. Once we agree on the project scope and terms, I’ll provide a detailed proposal and timeline. After approval, we kick off the design and development phases, with regular updates and feedback sessions."}></Dropdown>
           <hr className="w-full border-neutral" />
-          <Dropdown defaultChecked={false} question={"Lorem ipsum dolor sit amet consectetur?"} answer={"Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, numquam in expedita doloremque exercitationem alias? Ipsum dolor sit amet consectetur adipisicing elit. Dolorum, numquam in expedita doloremque exercitationem alias?"}></Dropdown>
+          <Dropdown defaultChecked={false} 
+            question={"How long does it take to design and develop a website?"} 
+            answer={"The timeline depends on the complexity and features of the website. Typically, a simple 1 page website takes about 2 week from initial consultation to launch, including design, development, and revisions. More complicated websites including photography appointments and multiple pages may take 3-6 weeks."}></Dropdown>
           <hr className="w-full border-neutral" />
-          <Dropdown defaultChecked={false} question={"Lorem ipsum dolor sit amet consectetur?"} answer={"Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, numquam in expedita doloremque exercitationem alias? Ipsum dolor sit amet consectetur adipisicing elit. Dolorum, numquam in expedita doloremque exercitationem alias?"}></Dropdown>
+          <Dropdown defaultChecked={false} 
+            question={"Can you help with branding and logo design?"} 
+            answer={"Absolutely! In addition to website design, I offer comprehensive graphic design services, including branding, logo design, and other visual elements to create a cohesive brand identity."}></Dropdown>
           <hr className="w-full border-neutral" />
-          <Dropdown defaultChecked={false} question={"Lorem ipsum dolor sit amet consectetur?"} answer={"Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, numquam in expedita doloremque exercitationem alias? Ipsum dolor sit amet consectetur adipisicing elit. Dolorum, numquam in expedita doloremque exercitationem alias?"}></Dropdown>
+          <Dropdown defaultChecked={false} 
+            question={"What are your rates for freelance design services?"} 
+            answer={"My rates vary depending on the project scope and complexity. I offer competitive, negotiable pricing with a focus on providing value. For example, website design services start at CA$499.99, and graphic design services start at CA$299.99."}></Dropdown>
+          <hr className="w-full border-neutral" />
+          <Dropdown defaultChecked={false} 
+            question={"What if I need changes to the website after it’s completed?"} 
+            answer={"I understand that needs may evolve, so I offer post-launch support and revisions. We can discuss any changes you need, and I’ll provide a quote and timeline for the updates."}></Dropdown>
+          <hr className="w-full border-neutral" />
+          <Dropdown defaultChecked={false} 
+            question={"Do you design websites for mobile devices?"} 
+            answer={"Yes, all my website designs are fully responsive, ensuring they look and perform well on desktops, laptops, tablets, and mobile devices."}></Dropdown><hr className="w-full border-neutral" />
+          <Dropdown defaultChecked={false} 
+            question={"What platforms do you use for website development?"} 
+            answer={"I specialize in several platforms, including Wix, WordPress, GoDaddy, and custom coded websites."}></Dropdown><hr className="w-full border-neutral" />
         </div>
       </div>
 
-      <div className="w-full my-48 flex flex-col items-center gap-16">
+      <div className="w-full mb-48 mt-20 flex flex-col items-center gap-16">
         <h3 className="text-4xl">Ready to get started?</h3>
         <div className="flex gap-10">
 
@@ -253,38 +273,7 @@ export default function Home() {
           <a className="link link-hover">Development</a>
         </nav>
         <nav>
-          <div className="grid grid-flow-col gap-4">
-            <a href="https://www.instagram.com/linovation_design/" target="_blank">
-              <svg 
-                xmlns="http://www.w3.org/2000/svg" 
-                width="30"
-                height="30"
-                viewBox="0 0 448 512"
-                className="fill-current">
-                  <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/>
-                </svg>
-            </a>
-            <a target="_blank">
-            <svg 
-              xmlns="http://www.w3.org/2000/svg" 
-              width="30"
-              height="30"
-              viewBox="0 0 512 512"
-              className="fill-current">
-              <path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z"/>
-            </svg>
-            </a>
-            <a href="https://mail.google.com/mail/u/0/?fs=1&to=lin@linovationdesign.com&su=&body=&bcc=&tf=cm" target="_blank">
-            <svg
-              xmlns="http://www.w3.org/2000/svg" 
-              width="30"
-              height="30"
-              viewBox="0 0 512 512"
-              className="fill-current">
-              <path d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"/>
-            </svg>
-            </a>
-          </div>
+          <Socials size={30}/>
         </nav>
         <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
       </footer>
