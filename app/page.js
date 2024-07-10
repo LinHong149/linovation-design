@@ -322,7 +322,7 @@ export default function Home() {
         </div>
       </div>
 
-      <footer id="FOOTER" className="footer footer-center bg-primary bg-opacity-50 text-primary-content p-14 pt-20 flex flex-col items-center gap-12 w-screen -mx-24 mt-16">
+      <footer id="FOOTER" className="footer footer-center bg-primary bg-opacity-50  p-14 pt-20 flex flex-col items-center gap-12 w-screen -mx-24 mt-16">
         <aside>
           <Image className="w-[14rem] object-contain" src={logo}></Image>
         </aside>
