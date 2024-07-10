@@ -1,80 +1,69 @@
+"use client";
+
+import { Link as ScrollLink, Element } from "react-scroll";
 import Image from "next/image";
 
-import logo from "../public/logo.png"
-import profile from "../public/Hong_Lin.png"
-import website_design from "../public/website_design.png"
-import graphic_design from "../public/graphic_design.png"
-import seo from "../public/seo.png"
-import development from "../public/development.png"
-import canva from "../public/canva.png"
-import photoshop from "../public/photoshop.png"
-import figma from "../public/figma.png"
+import logo from "../public/logo.png";
+import profile from "../public/Hong_Lin.png";
+import website_design from "../public/website_design.png";
+import graphic_design from "../public/graphic_design.png";
+import seo from "../public/seo.png";
+import development from "../public/development.png";
+import canva from "../public/canva.png";
+import photoshop from "../public/photoshop.png";
+import figma from "../public/figma.png";
 import "./globals.css";
 
-import Button from "./components/button"
-import Dropdown from "./components/dropdown"
-import Socials from "./components/socials"
+import Button from "./components/button";
+import Dropdown from "./components/dropdown";
+import Socials from "./components/socials";
 
 export default function Home() {
   return (
     <main className="flex flex-col px-24 pt-10 overflow-hidden bg-white">
       <div id="NAVBAR" className="navbar w-full h-fit flex justify-between w-screen -mx-24 lg:px-24 px-4">
-
         <div className="navbar-start flex items-center gap-2">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden p-2 aspect-square">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h8m-8 6h16" />
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />
               </svg>
             </div>
-            <ul
-              tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-              <li><a>Home</a></li>
-              <li><a>About</a></li>
+            <ul tabIndex={0} className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+              <li><ScrollLink to="home" smooth={true} duration={500}>Home</ScrollLink></li>
+              <li><ScrollLink to="about" smooth={true} duration={500}>About</ScrollLink></li>
               <li>
-                <a>Services</a>
+                <ScrollLink to="website-design" smooth={true} duration={500}>Services</ScrollLink>
                 <ul className="p-2">
-                  <li><a>Webite Design</a></li>
-                  <li><a>Graphic Design</a></li>
-                  <li><a>SEO Optimization</a></li>
-                  <li><a>Development</a></li>
+                  <li><ScrollLink to="website-design" smooth={true} duration={500}>Website Design</ScrollLink></li>
+                  <li><ScrollLink to="graphic-design" smooth={true} duration={500}>Graphic Design</ScrollLink></li>
+                  <li><ScrollLink to="seo-optimization" smooth={true} duration={500}>SEO Optimization</ScrollLink></li>
+                  <li><ScrollLink to="development" smooth={true} duration={500}>Development</ScrollLink></li>
                 </ul>
               </li>
-              <li><a>FAQ</a></li>
-              <li><a>Contact</a></li>
+              <li><ScrollLink to="faq" smooth={true} duration={500}>FAQ</ScrollLink></li>
+              <li><ScrollLink to="contact" smooth={true} duration={500}>Contact</ScrollLink></li>
             </ul>
           </div>
           <Image className="w-[8rem] object-contain" src={logo}></Image>
         </div>
-
-
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
-            <li><a>Home</a></li>
-            <li><a>About</a></li>
+            <li><ScrollLink to="home" smooth={true} duration={500}>Home</ScrollLink></li>
+            <li><ScrollLink to="about" smooth={true} duration={500}>About</ScrollLink></li>
             <li>
               <details>
                 <summary>Services</summary>
                 <ul className="p-2 bg-white">
-                  <li><a>Webite Design</a></li>
-                  <li><a>Graphic Design</a></li>
-                  <li><a>SEO Optimization</a></li>
-                  <li><a>Development</a></li>
+                  <li><ScrollLink to="website-design" smooth={true} duration={500}>Website Design</ScrollLink></li>
+                  <li><ScrollLink to="graphic-design" smooth={true} duration={500}>Graphic Design</ScrollLink></li>
+                  <li><ScrollLink to="seo-optimization" smooth={true} duration={500}>SEO Optimization</ScrollLink></li>
+                  <li><ScrollLink to="development" smooth={true} duration={500}>Development</ScrollLink></li>
                 </ul>
               </details>
             </li>
-            <li><a>FAQ</a></li>
-            <li><a>Contact</a></li>
+            <li><ScrollLink to="faq" smooth={true} duration={500}>FAQ</ScrollLink></li>
+            <li><ScrollLink to="contact" smooth={true} duration={500}>Contact</ScrollLink></li>
           </ul>
         </div>
         <div className="navbar-end lg:pr-0 pr-3">
@@ -83,7 +72,7 @@ export default function Home() {
       </div>
         
 
-      <div id="HERO" className="flex flex-col w-full gap-8 items-center [&>*]:text-center py-48">
+      <div id="home" className="flex flex-col w-full gap-8 items-center [&>*]:text-center py-48">
         <h1 className="w-fit text-8xl leading-[8rem]">Hi, My name's Lin. <br/> A freelance designer.</h1>
         <h2 className="w-fit text-2xl">I'm dedicated to transforming your visions into reality.</h2>
         <Button text="Let's Talk"></Button>
@@ -104,7 +93,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div id="ABOUT" className="flex h-[70vh] my-36">
+      <div id="about" className="flex h-[70vh] my-36">
         <div className="relative w-3/5 h-full">
           <div className="bg-warning opacity-50 absolute top-0 -left-48 z-0 w-[75%] h-full rounded-3xl"></div>
           <Image className="z-2 absolute top-20 left-48 rounded-3xl w-[60%]  shadow-xl" src={profile}></Image>
@@ -117,7 +106,7 @@ export default function Home() {
       </div>
 
 
-      <div id="WEBSITE DESIGN" className="flex h-[70vh] my-36">
+      <div id="website-design" className="flex h-[70vh] my-36">
         <div className="flex flex-col w-2/5 h-full justify-center gap-8 pl-[8%]">
           <div className="flex flex-col gap-4">
             <h3 className="text-6xl">Website Design Services</h3>
@@ -172,7 +161,7 @@ export default function Home() {
       </div>
 
 
-      <div id="GRAPHIC DESIGN" className="flex h-[70vh] my-36">
+      <div id="graphic-design" className="flex h-[70vh] my-36">
         <div className="relative w-3/5 h-full">
           <div className="bg-info opacity-75 absolute top-0 -left-48 z-0 w-[75%] h-full rounded-3xl"></div>
           <Image className="z-1 absolute top-20 left-20 rounded-3xl w-[75%]  shadow-xl" src={graphic_design}></Image>
@@ -196,7 +185,7 @@ export default function Home() {
       </div>
 
 
-      <div id="SEO OPTIMIZATION" className="flex h-[70vh] my-36">
+      <div id="seo-optimization" className="flex h-[70vh] my-36">
         <div className="flex flex-col w-2/5 h-full justify-center gap-8 pl-[8%]">
           <div className="flex flex-col gap-4">
             <h3 className="text-6xl">SEO Optimization Services</h3>
@@ -215,7 +204,7 @@ export default function Home() {
       </div>
 
 
-      <div id="DEVELOPMENT SERVICE" className="flex h-[70vh] my-36">
+      <div id="development" className="flex h-[70vh] my-36">
         <div className="relative w-3/5 h-full">
           <div className="bg-error opacity-75 absolute top-0 -left-48 z-0 w-[75%] h-full rounded-3xl"></div>
           <Image className="z-1 absolute top-20 left-20 rounded-3xl w-[75%] aspect-[5/4] object-cover object-bottom shadow-xl" src={development}></Image>
@@ -233,7 +222,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div id="FEATURES" className="w-screen bg-neutral [&>*]:text-[#111418] -mx-24 my-48 px-32 py-48 flex flex-col gap-14 min-h-screen flex flex-col items-center justify-center">
+      <div id="features" className="w-screen bg-neutral [&>*]:text-[#111418] -mx-24 my-48 px-32 py-48 flex flex-col gap-14 min-h-screen flex flex-col items-center justify-center">
         <div className="flex w-full gap-10">
           <div className="flex-[5] flex flex-col gap-4 rounded-3xl shadow-xl bg-[#FEDF80] p-12">
             <h3 className="text-7xl">Transforming your ideas into stunning visuals.</h3>
@@ -261,7 +250,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div id="FAQ" className="w-full flex flex-col items-center py-48 gap-16">
+      <div id="faq" className="w-full flex flex-col items-center py-48 gap-16">
         <h2 className="text-4xl w-fit">Frequently Asked Questions</h2>
 
         <div className="flex flex-col gap-6 w-[50%] min-w-[50rem]">
@@ -295,7 +284,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="w-full mb-48 mt-20 flex flex-col items-center gap-16">
+      <div id="contact" className="w-full mb-48 mt-20 flex flex-col items-center gap-16">
         <h3 className="text-4xl">Ready to get started?</h3>
         <div className="flex gap-10">
 
@@ -323,7 +312,7 @@ export default function Home() {
         </div>
       </div>
 
-      <footer id="FOOTER" className="footer footer-center bg-primary bg-opacity-50  p-14 pt-20 flex flex-col items-center gap-12 w-screen -mx-24 mt-16">
+      <footer id="footer" className="footer footer-center bg-primary bg-opacity-50  p-14 pt-20 flex flex-col items-center gap-12 w-screen -mx-24 mt-16">
         <aside>
           <Image className="w-[14rem] object-contain" src={logo}></Image>
         </aside>
