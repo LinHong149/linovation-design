@@ -18,10 +18,70 @@ import Socials from "./components/socials"
 export default function Home() {
   return (
     <main className="flex flex-col px-24 pt-10 overflow-hidden">
-      <div id="NAVBAR" className="w-full h-fit flex justify-between">
-        <Image className="w-[8rem] object-contain" src={logo}></Image>
-        <Button text="Let's Talk"></Button>
+      <div id="NAVBAR" className="navbar w-full h-fit flex justify-between w-screen -mx-24 lg:px-24 px-4">
+
+        <div className="navbar-start flex items-center gap-2">
+          <div className="dropdown">
+            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden p-2 aspect-square">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h8m-8 6h16" />
+              </svg>
+            </div>
+            <ul
+              tabIndex={0}
+              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+              <li><a>Home</a></li>
+              <li><a>About</a></li>
+              <li>
+                <a>Services</a>
+                <ul className="p-2">
+                  <li><a>Webite Design</a></li>
+                  <li><a>Graphic Design</a></li>
+                  <li><a>SEO Optimization</a></li>
+                  <li><a>Development</a></li>
+                </ul>
+              </li>
+              <li><a>FAQ</a></li>
+              <li><a>Contact</a></li>
+            </ul>
+          </div>
+          <Image className="w-[8rem] object-contain" src={logo}></Image>
+        </div>
+
+
+        <div className="navbar-center hidden lg:flex">
+          <ul className="menu menu-horizontal px-1">
+          <li><a>Home</a></li>
+          <li><a>About</a></li>
+            <li>
+              <details>
+                <summary>Services</summary>
+                <ul className="p-2">
+                  <li><a>Webite Design</a></li>
+                  <li><a>Graphic Design</a></li>
+                  <li><a>SEO Optimization</a></li>
+                  <li><a>Development</a></li>
+                </ul>
+              </details>
+            </li>
+            <li><a>FAQ</a></li>
+            <li><a>Contact</a></li>
+          </ul>
+        </div>
+        <div className="navbar-end lg:pr-0 pr-3">
+          <Button text="Let's Talk"></Button>
+        </div>
       </div>
+        
 
       <div id="HERO" className="flex flex-col w-full gap-8 items-center [&>*]:text-center py-48">
         <h1 className="w-fit text-8xl leading-[8rem]">Hi, My name's Lin. <br/> A freelance designer.</h1>
