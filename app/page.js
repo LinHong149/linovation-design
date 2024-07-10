@@ -93,133 +93,141 @@ export default function Home() {
         </div>
       </div>
 
-      <div id="about" className="flex h-[70vh] my-36">
-        <div className="relative w-3/5 h-full">
-          <div className="bg-warning opacity-50 absolute top-0 -left-48 z-0 w-[75%] h-full rounded-3xl"></div>
-          <Image className="z-2 absolute top-20 left-48 rounded-3xl w-[60%]  shadow-xl" src={profile}></Image>
-        </div>
-        <div className="flex flex-col w-2/5 h-full justify-center gap-4 pr-[8%]">
-          <h3 className="text-6xl">About me</h3>
-          <p className="">Hi, I’m Lin, a dedicated freelance designer focused on helping you create a unique and compelling brand. <br /> <br /> I transform your visions into reality with stunning websites, eye-catching graphics, and robust development solutions. <br /> <br />Let’s collaborate to bring your brand to life.</p>
-          <Socials size={24}/>
-        </div>
-      </div>
 
-
-      <div id="website-design" className="flex h-[70vh] my-36">
-        <div className="flex flex-col w-2/5 h-full justify-center gap-8 pl-[8%]">
-          <div className="flex flex-col gap-4">
-            <h3 className="text-6xl">Website Design Services</h3>
-            <p className="">Transform your online presence with a custom, responsive website that captures your brand’s essence and engages your audience.</p>
+      <div id="about" className="py-20 my-16">
+        <div className="flex h-[70vh]">
+          <div className="relative w-3/5 h-full">
+            <div className="bg-warning opacity-50 absolute top-0 -left-48 z-0 w-[75%] h-full rounded-3xl"></div>
+            <Image className="z-2 absolute top-20 left-48 rounded-3xl w-[60%]  shadow-xl" src={profile}></Image>
           </div>
-          <div className="flex flex-col gap-4">
-            <h3 className="text-4xl">From CA$499.99</h3>
-            <p className="text-sm">Negotiable Prices</p>
-            <Button text={"Let's Talk"}></Button>
-          </div>
-        </div>
-        <div className="relative w-3/5 h-full mt-12">
-        <div className="bg-secondary opacity-50 absolute top-0 -right-48 z-0 w-[75%] h-full rounded-3xl"></div>
-        <Image className="z-1 absolute top-20 right-12 rounded-3xl w-[70%] shadow-xl" src={website_design} alt="Website Design"></Image>
-        <div className="bg-neutral absolute top-72 right-[20rem] z-2 max-w-[30rem] rounded-3xl p-12 shadow-xl">
-          <ul className="text-white list-none">
-            <li className="flex mb-2 ">
-              <input type="checkbox" id="consultation" name="consultation" checked className="checkbox checkbox-sm mt-[0.1rem] mr-[0.2rem]" />
-              <label htmlFor="consultation" className="ml-2">Free, no-commitment consultation.</label>
-            </li>
-            <li className="flex mb-2 ">
-              <input type="checkbox" id="responsive" name="responsive" checked className="checkbox checkbox-sm mt-[0.1rem] mr-[0.2rem]" />
-              <label htmlFor="responsive" className="ml-2">Responsive design for desktop, laptop, and mobile.</label>
-            </li>
-            <li className="flex mb-2 ">
-              <input type="checkbox" id="pages" name="pages" checked className="checkbox checkbox-sm mt-[0.1rem] mr-[0.2rem]" />
-              <label htmlFor="pages" className="ml-2">Up to 8 website pages.</label>
-            </li>
-            <li className="flex mb-2 ">
-              <input type="checkbox" id="seo" name="seo" checked className="checkbox checkbox-sm mt-[0.1rem] mr-[0.2rem]" />
-              <label htmlFor="seo" className="ml-2">Standard SEO set up.</label>
-            </li>
-            <li className="flex mb-2 ">
-              <input type="checkbox" id="designs" name="designs" checked className="checkbox checkbox-sm mt-[0.1rem] mr-[0.2rem]" />
-              <label htmlFor="designs" className="ml-2">Attractive designs tailored to your business.</label>
-            </li>
-            <li className="flex mb-2 ">
-              <input type="checkbox" id="prices" name="prices" checked className="checkbox checkbox-sm mt-[0.1rem] mr-[0.2rem]" />
-              <label htmlFor="prices" className="ml-2">Flexible prices.</label>
-            </li>
-            <li className="flex mb-2 ">
-              <input type="checkbox" id="iterative" name="iterative" checked className="checkbox checkbox-sm mt-[0.1rem] mr-[0.2rem]" />
-              <label htmlFor="iterative" className="ml-2">Iterative design process valuing your feedback.</label>
-            </li>
-            <li className="flex mb-2 ">
-              <input type="checkbox" id="features" name="features" checked className="checkbox checkbox-sm mt-[0.1rem] mr-[0.2rem]" />
-              <label htmlFor="features" className="ml-2">Advanced features such as video headers, image sliders, and galleries.</label>
-            </li>
-          </ul>
-        </div>
-      </div>
-      </div>
-
-
-      <div id="graphic-design" className="flex h-[70vh] my-36">
-        <div className="relative w-3/5 h-full">
-          <div className="bg-info opacity-75 absolute top-0 -left-48 z-0 w-[75%] h-full rounded-3xl"></div>
-          <Image className="z-1 absolute top-20 left-20 rounded-3xl w-[75%]  shadow-xl" src={graphic_design}></Image>
-          <div className="bg-white absolute top-[30rem] left-52 z-2 w-fit h-fit rounded-3xl shadow-xl flex p-8 gap-8">
-            <Image className="w-24 aspect-square rounded-3xl shadow-xl" src={photoshop}/>
-            <Image className="w-24 aspect-square rounded-3xl shadow-xl" src={figma}/>
-            <Image className="w-24 aspect-square rounded-3xl shadow-xl" src={canva}/>
-          </div>
-        </div>
-        <div className="flex flex-col w-2/5 h-full justify-center gap-8 pr-[8%]">
-          <div className="flex flex-col gap-4">
-            <h3 className="text-6xl">Graphic Design Services</h3>
-            <p className="">Elevate your brand’s visual identity with stunning graphics that communicate your message and leave a lasting impression.</p>
-          </div>
-          <div className="flex flex-col gap-4">
-            <h3 className="text-4xl">From CA$299.99</h3>
-            <p className="text-sm">Negotiable Prices</p>
-            <Button text={"Let's Talk"}></Button>
+          <div className="flex flex-col w-2/5 h-full justify-center gap-4 pr-[8%]">
+            <h3 className="text-6xl">About me</h3>
+            <p className="">Hi, I’m Lin, a dedicated freelance designer focused on helping you create a unique and compelling brand. <br /> <br /> I transform your visions into reality with stunning websites, eye-catching graphics, and robust development solutions. <br /> <br />Let’s collaborate to bring your brand to life.</p>
+            <Socials size={24}/>
           </div>
         </div>
       </div>
 
-
-      <div id="seo-optimization" className="flex h-[70vh] my-36">
-        <div className="flex flex-col w-2/5 h-full justify-center gap-8 pl-[8%]">
-          <div className="flex flex-col gap-4">
-            <h3 className="text-6xl">SEO Optimization Services</h3>
-            <p className="">Boost your website’s visibility and attract more traffic with tailored SEO strategies that drive results.</p>
+    
+      <div id="website-design" className="py-20 my-16">
+        <div className="flex h-[70vh]">
+          <div className="flex flex-col w-2/5 h-full justify-center gap-8 pl-[8%]">
+            <div className="flex flex-col gap-4">
+              <h3 className="text-6xl">Website Design Services</h3>
+              <p className="">Transform your online presence with a custom, responsive website that captures your brand’s essence and engages your audience.</p>
+            </div>
+            <div className="flex flex-col gap-4">
+              <h3 className="text-4xl">From CA$499.99</h3>
+              <p className="text-sm">Negotiable Prices</p>
+              <Button text={"Let's Talk"}></Button>
+            </div>
           </div>
-          <div className="flex flex-col gap-4">
-            <h3 className="text-4xl">From CA$399.99</h3>
-            <p className="text-sm">Negotiable Prices</p>
-            <Button text={"Let's Talk"}></Button>
+          <div className="relative w-3/5 h-full mt-12">
+          <div className="bg-secondary opacity-50 absolute top-0 -right-48 z-0 w-[75%] h-full rounded-3xl"></div>
+          <Image className="z-1 absolute top-20 right-12 rounded-3xl w-[70%] shadow-xl" src={website_design} alt="Website Design"></Image>
+          <div className="bg-neutral absolute top-72 right-[20rem] z-2 max-w-[30rem] rounded-3xl p-12 shadow-xl">
+            <ul className="text-white list-none">
+              <li className="flex mb-2 ">
+                <input type="checkbox" id="consultation" name="consultation" checked className="checkbox checkbox-sm mt-[0.1rem] mr-[0.2rem]" />
+                <label htmlFor="consultation" className="ml-2">Free, no-commitment consultation.</label>
+              </li>
+              <li className="flex mb-2 ">
+                <input type="checkbox" id="responsive" name="responsive" checked className="checkbox checkbox-sm mt-[0.1rem] mr-[0.2rem]" />
+                <label htmlFor="responsive" className="ml-2">Responsive design for desktop, laptop, and mobile.</label>
+              </li>
+              <li className="flex mb-2 ">
+                <input type="checkbox" id="pages" name="pages" checked className="checkbox checkbox-sm mt-[0.1rem] mr-[0.2rem]" />
+                <label htmlFor="pages" className="ml-2">Up to 8 website pages.</label>
+              </li>
+              <li className="flex mb-2 ">
+                <input type="checkbox" id="seo" name="seo" checked className="checkbox checkbox-sm mt-[0.1rem] mr-[0.2rem]" />
+                <label htmlFor="seo" className="ml-2">Standard SEO set up.</label>
+              </li>
+              <li className="flex mb-2 ">
+                <input type="checkbox" id="designs" name="designs" checked className="checkbox checkbox-sm mt-[0.1rem] mr-[0.2rem]" />
+                <label htmlFor="designs" className="ml-2">Attractive designs tailored to your business.</label>
+              </li>
+              <li className="flex mb-2 ">
+                <input type="checkbox" id="prices" name="prices" checked className="checkbox checkbox-sm mt-[0.1rem] mr-[0.2rem]" />
+                <label htmlFor="prices" className="ml-2">Flexible prices.</label>
+              </li>
+              <li className="flex mb-2 ">
+                <input type="checkbox" id="iterative" name="iterative" checked className="checkbox checkbox-sm mt-[0.1rem] mr-[0.2rem]" />
+                <label htmlFor="iterative" className="ml-2">Iterative design process valuing your feedback.</label>
+              </li>
+              <li className="flex mb-2 ">
+                <input type="checkbox" id="features" name="features" checked className="checkbox checkbox-sm mt-[0.1rem] mr-[0.2rem]" />
+                <label htmlFor="features" className="ml-2">Advanced features such as video headers, image sliders, and galleries.</label>
+              </li>
+            </ul>
           </div>
         </div>
-        <div className="relative w-3/5 h-full">
-          <div className="bg-success opacity-50 absolute top-0 -right-48 z-0 w-[75%] h-full rounded-3xl"></div>
-          <Image className="z-1 absolute top-32 right-12 rounded-3xl w-[75%] aspect-[5/4] object-cover shadow-xl" src={seo}></Image>
         </div>
       </div>
 
+      <div id="graphic-design" className="py-20 my-16">
+        <div className="flex h-[70vh]">
+          <div className="relative w-3/5 h-full">
+            <div className="bg-info opacity-75 absolute top-0 -left-48 z-0 w-[75%] h-full rounded-3xl"></div>
+            <Image className="z-1 absolute top-20 left-20 rounded-3xl w-[75%]  shadow-xl" src={graphic_design}></Image>
+            <div className="bg-white absolute top-[30rem] left-52 z-2 w-fit h-fit rounded-3xl shadow-xl flex p-8 gap-8">
+              <Image className="w-24 aspect-square rounded-3xl shadow-xl" src={photoshop}/>
+              <Image className="w-24 aspect-square rounded-3xl shadow-xl" src={figma}/>
+              <Image className="w-24 aspect-square rounded-3xl shadow-xl" src={canva}/>
+            </div>
+          </div>
+          <div className="flex flex-col w-2/5 h-full justify-center gap-8 pr-[8%]">
+            <div className="flex flex-col gap-4">
+              <h3 className="text-6xl">Graphic Design Services</h3>
+              <p className="">Elevate your brand’s visual identity with stunning graphics that communicate your message and leave a lasting impression.</p>
+            </div>
+            <div className="flex flex-col gap-4">
+              <h3 className="text-4xl">From CA$299.99</h3>
+              <p className="text-sm">Negotiable Prices</p>
+              <Button text={"Let's Talk"}></Button>
+            </div>
+          </div>
+        </div>
+      </div>
 
-      <div id="development" className="flex h-[70vh] my-36">
-        <div className="relative w-3/5 h-full">
-          <div className="bg-error opacity-75 absolute top-0 -left-48 z-0 w-[75%] h-full rounded-3xl"></div>
-          <Image className="z-1 absolute top-20 left-20 rounded-3xl w-[75%] aspect-[5/4] object-cover object-bottom shadow-xl" src={development}></Image>
-        </div>
-        <div className="flex flex-col w-2/5 h-full justify-center gap-8 pr-[8%]">
-          <div className="flex flex-col gap-4">
-            <h3 className="text-6xl">Development Services</h3>
-            <p className="">Bring your ideas to life with robust, scalable development solutions that meet your business needs and exceed expectations.</p>
+      <div id="seo-optimization" className="py-20 my-16">
+        <div className="flex h-[70vh]">
+          <div className="flex flex-col w-2/5 h-full justify-center gap-8 pl-[8%]">
+            <div className="flex flex-col gap-4">
+              <h3 className="text-6xl">SEO Optimization Services</h3>
+              <p className="">Boost your website’s visibility and attract more traffic with tailored SEO strategies that drive results.</p>
+            </div>
+            <div className="flex flex-col gap-4">
+              <h3 className="text-4xl">From CA$399.99</h3>
+              <p className="text-sm">Negotiable Prices</p>
+              <Button text={"Let's Talk"}></Button>
+            </div>
           </div>
-          <div className="flex flex-col gap-4">
-            <h3 className="text-4xl">From CA$799.99</h3>
-            <p className="text-sm">Negotiable Prices</p>
-            <Button text={"Let's Talk"}></Button>
+          <div className="relative w-3/5 h-full">
+            <div className="bg-success opacity-50 absolute top-0 -right-48 z-0 w-[75%] h-full rounded-3xl"></div>
+            <Image className="z-1 absolute top-32 right-12 rounded-3xl w-[75%] aspect-[5/4] object-cover shadow-xl" src={seo}></Image>
           </div>
         </div>
+      </div>
+
+      <div id="development" className="py-20 my-16">
+        <div className="flex h-[70vh]">
+          <div className="relative w-3/5 h-full">
+            <div className="bg-error opacity-75 absolute top-0 -left-48 z-0 w-[75%] h-full rounded-3xl"></div>
+            <Image className="z-1 absolute top-20 left-20 rounded-3xl w-[75%] aspect-[5/4] object-cover object-bottom shadow-xl" src={development}></Image>
+          </div>
+          <div className="flex flex-col w-2/5 h-full justify-center gap-8 pr-[8%]">
+            <div className="flex flex-col gap-4">
+              <h3 className="text-6xl">Development Services</h3>
+              <p className="">Bring your ideas to life with robust, scalable development solutions that meet your business needs and exceed expectations.</p>
+            </div>
+            <div className="flex flex-col gap-4">
+              <h3 className="text-4xl">From CA$799.99</h3>
+              <p className="text-sm">Negotiable Prices</p>
+              <Button text={"Let's Talk"}></Button>
+            </div>
+          </div>
+          </div>
       </div>
 
       <div id="features" className="w-screen bg-neutral [&>*]:text-[#111418] -mx-24 my-48 px-32 py-48 flex flex-col gap-14 min-h-screen flex flex-col items-center justify-center">
@@ -250,7 +258,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div id="faq" className="w-full flex flex-col items-center py-48 gap-16">
+      <div id="faq" className="w-full flex flex-col items-center py-24 m-10 gap-16">
         <h2 className="text-4xl w-fit">Frequently Asked Questions</h2>
 
         <div className="flex flex-col gap-6 w-[50%] min-w-[50rem]">
@@ -284,7 +292,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div id="contact" className="w-full mb-48 mt-20 flex flex-col items-center gap-16">
+      <div id="contact" className="w-full p-20 h-screen justify-center flex flex-col items-center gap-16">
         <h3 className="text-4xl">Ready to get started?</h3>
         <div className="flex gap-10">
 
