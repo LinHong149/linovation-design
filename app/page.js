@@ -287,10 +287,11 @@ export default function Home() {
           <hr className="w-full border-neutral" />
           <Dropdown defaultChecked={false} 
             question={"Do you design websites for mobile devices?"} 
-            answer={"Yes, all my website designs are fully responsive, ensuring they look and perform well on desktops, laptops, tablets, and mobile devices."}></Dropdown><hr className="w-full border-neutral" />
+            answer={"Yes, all my website designs are fully responsive, ensuring they look and perform well on desktops, laptops, tablets, and mobile devices."}></Dropdown>
+          <hr className="w-full border-neutral" />
           <Dropdown defaultChecked={false} 
             question={"What platforms do you use for website development?"} 
-            answer={"I specialize in several platforms, including Wix, WordPress, GoDaddy, and custom coded websites."}></Dropdown><hr className="w-full border-neutral" />
+            answer={"I specialize in several platforms, including Wix, WordPress, GoDaddy, and custom coded websites."}></Dropdown>
         </div>
       </div>
 
