@@ -17,7 +17,7 @@ import Socials from "./components/socials"
 
 export default function Home() {
   return (
-    <main className="flex flex-col px-24 pt-10 overflow-hidden">
+    <main className="flex flex-col px-24 pt-10 overflow-hidden bg-white">
       <div id="NAVBAR" className="navbar w-full h-fit flex justify-between w-screen -mx-24 lg:px-24 px-4">
 
         <div className="navbar-start flex items-center gap-2">
@@ -60,12 +60,12 @@ export default function Home() {
 
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
-          <li><a>Home</a></li>
-          <li><a>About</a></li>
+            <li><a>Home</a></li>
+            <li><a>About</a></li>
             <li>
               <details>
                 <summary>Services</summary>
-                <ul className="p-2">
+                <ul className="p-2 bg-white">
                   <li><a>Webite Design</a></li>
                   <li><a>Graphic Design</a></li>
                   <li><a>SEO Optimization</a></li>

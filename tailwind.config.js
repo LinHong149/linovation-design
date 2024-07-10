@@ -11,7 +11,7 @@ module.exports = {
       "secondary": "#ffacff",
       "accent": "#43ffff",
       "neutral": "#f6ffff",
-      "base-100": "#f8ffff",
+      "base-100": "#f9ffff",
       "info": "#41ffff",
       "success": "#9affdc",
       "warning": "#fff129",
@@ -26,6 +26,9 @@ module.exports = {
       fontFamily: {
         sans: ['Montserrat', 'sans-serif'],
       },
+      backgroundColor: {
+        "white": "#f9ffff"
+      }
     },
   },
   plugins: [
