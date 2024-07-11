@@ -4,6 +4,7 @@ import { Link as ScrollLink, Element } from "react-scroll";
 import Image from "next/image";
 
 import logo from "../public/logo.png";
+import logo_white from "../public/logo_white.png";
 import profile from "../public/Hong_Lin.png";
 import website_design from "../public/website_design.png";
 import graphic_design from "../public/graphic_design.png";
@@ -125,7 +126,7 @@ export default function Home() {
           <div className="relative w-3/5 h-full mt-12">
           <div className="bg-secondary opacity-50 absolute top-0 -right-48 z-0 w-[75%] h-full rounded-3xl"></div>
           <Image className="z-1 absolute top-20 right-12 rounded-3xl w-[70%] shadow-xl" src={website_design} alt="Website Design"></Image>
-          <div className="bg-neutral absolute top-72 right-[20rem] z-2 max-w-[30rem] rounded-3xl p-12 shadow-xl">
+          <div className="bg-base-100 absolute top-72 right-[20rem] z-2 max-w-[30rem] rounded-3xl p-12 shadow-xl">
             <ul className="text-white list-none">
               <li className="flex mb-2 ">
                 <input type="checkbox" id="consultation" name="consultation" checked className="checkbox checkbox-sm mt-[0.1rem] mr-[0.2rem]" />
@@ -230,7 +231,7 @@ export default function Home() {
           </div>
       </div>
 
-      <div id="features" className="w-screen bg-neutral [&>*]:text-[#111418] -mx-24 my-48 px-32 py-48 flex flex-col gap-14 min-h-screen flex flex-col items-center justify-center">
+      <div id="features" className="w-screen bg-base-100 [&>*]:text-[#111418] -mx-24 my-48 px-32 py-48 flex flex-col gap-14 min-h-screen flex flex-col items-center justify-center">
         <div className="flex w-full gap-10">
           <div className="flex-[5] flex flex-col gap-4 rounded-3xl shadow-xl bg-[#FEDF80] p-12">
             <h3 className="text-7xl">Transforming your ideas into stunning visuals.</h3>
@@ -292,7 +293,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div id="contact" className="w-full p-20 h-screen justify-center flex flex-col items-center gap-16">
+      {/* <div id="contact" className="w-full p-20 h-screen justify-center flex flex-col items-center gap-16">
         <h3 className="text-4xl">Ready to get started?</h3>
         <div className="flex gap-10">
 
@@ -318,22 +319,47 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
-      <footer id="footer" className="footer footer-center bg-primary bg-opacity-50  p-14 pt-20 flex flex-col items-center gap-12 w-screen -mx-24 mt-16">
-        <aside>
-          <Image className="w-[14rem] object-contain" src={logo}></Image>
-        </aside>
-        <nav className="grid grid-flow-col gap-4 [&>*]:text-lg">
-          <a className="link link-hover">Website Design</a>
-          <a className="link link-hover">Graphic Design</a>
-          <a className="link link-hover">SEO Optimization</a>
-          <a className="link link-hover">Development</a>
-        </nav>
-        <nav>
-          <Socials size={30}/>
-        </nav>
+      <footer className="bg-base-100 text-white px-14 pt-20 pb-10 flex flex-col justify-between gap-12 w-screen -mx-24 mt-16">
+        <div className="footer">
+          <aside className="flex flex-col gap-4">
+            <Image className="w-[12rem] object-contain" src={logo_white}></Image>
+            <Socials size={24}/>
+          </aside>
+          <nav>
+            <h6 className="footer-title">Services</h6>
+            <a className="link link-hover">Website Design</a>
+            <a className="link link-hover">Graphic Design</a>
+            <a className="link link-hover">SEO Optimization</a>
+            <a className="link link-hover">Development</a>
+          </nav>
+          <nav>
+            <h6 className="footer-title">Company</h6>
+            <a className="link link-hover">About</a>
+            <a className="link link-hover">Services</a>
+            <a className="link link-hover">Features</a>
+            <a className="link link-hover">FAQ</a>
+          </nav>
+          <form className="">
+            <h6 className="footer-title">Newsletter</h6>
+            <fieldset className="form-control">
+              <label className="label">
+                <span className="label-text">Interested in my services? <br /> Enter your email address and I'll get back to you!</span>
+              </label>
+              <div className="join">
+                <input
+                  type="text"
+                  placeholder="username@site.com"
+                  className="input input-bordered join-item" />
+                <button className="btn bg-white text-black hover:bg-[#ebf0f0] join-item">Subscribe</button>
+              </div>
+            </fieldset>
+          </form>
+      </div>
+      <div className="footer">
         <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
+      </div>
       </footer>
 
 
