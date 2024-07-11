@@ -321,7 +321,7 @@ export default function Home() {
         </div>
       </div> */}
 
-      <footer className="bg-base-100 text-white px-14 pt-20 pb-10 flex flex-col justify-between gap-12 w-screen -mx-24 mt-16">
+      <footer id="footer" className="bg-base-100 text-white px-14 pt-20 pb-10 flex flex-col justify-between gap-12 w-screen -mx-24 mt-16">
         <div className="footer">
           <aside className="flex flex-col gap-4">
             <Image className="w-[12rem] object-contain" src={logo_white}></Image>
