@@ -122,15 +122,15 @@ export default function Home() {
       </div>
 
 
-      <div id="about" className="py-20 my-16 flex sm:flex-row flex-col">
-        <div className="flex sm:h-[70vh]">
-          <div className="relative sm:w-3/5 h-full">
-            <div className="bg-warning opacity-50 absolute top-0 -left-48 z-0 w-[75%] h-full rounded-3xl"></div>
-            <Image className="z-2 absolute top-20 left-48 rounded-3xl w-[60%]  shadow-xl" src={profile}></Image>
+      <div id="about" className="py-20 my-16 flex">
+        <div className="flex h-fit sm:h-[70vh] sm:flex-row flex-col-reverse gap-10 sm:gap-0 sm:w-full">
+          <div className="relative sm:w-3/5 h-80 sm:h-full flex justify-center">
+            <div className="bg-warning opacity-50 absolute -top-5 sm:top-0 left-2 sm:-left-48 z-0 w-[80%] sm:w-[75%] h-80 sm:h-full rounded-3xl"></div>
+            <Image className="z-2 absolute sm:top-20 sm:left-48 rounded-3xl w-[80%] h-80 sm:h-auto object-cover sm:w-[60%] shadow-xl" src={profile}></Image>
           </div>
           <div className="flex flex-col sm:w-2/5 h-full justify-center gap-4 pr-[8%]">
             <h3 className="text-3xl sm:text-6xl">About me</h3>
-            <p className="">Hi, I’m Lin, a dedicated freelance designer focused on helping you create a unique and compelling brand. <br /> <br /> I transform your visions into reality with stunning websites, eye-catching graphics, and robust development solutions. <br /> <br />Let’s collaborate to bring your brand to life.</p>
+            <p className="text-sm sm:text-md">Hi, I’m Lin, a dedicated freelance designer focused on helping you create a unique and compelling brand. <br /> <br /> I transform your visions into reality with stunning websites, eye-catching graphics, and robust development solutions. <br /> <br />Let’s collaborate to bring your brand to life.</p>
             <Socials size={24}/>
           </div>
         </div>
