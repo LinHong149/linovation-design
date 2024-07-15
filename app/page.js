@@ -1,7 +1,10 @@
 "use client";
 
+
+
 import { Link as ScrollLink, Element } from "react-scroll";
 import Image from "next/image";
+import { useState } from 'react';
 
 import logo from "../public/logo.png";
 import logo_white from "../public/logo_white.png";
@@ -20,9 +23,33 @@ import Dropdown from "./components/dropdown";
 import Socials from "./components/socials";
 
 export default function Home() {
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    console.log(JSON.stringify({ email }));
+
+    const res = await fetch('/api/subscribe', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ email }),
+    });
+    console.log("after api call");
+
+    const data = await res.json();
+    if (res.status === 200) {
+      setMessage('Subscription successful!');
+    } else {
+      setMessage(`Subscription failed: ${data.message}`);
+    }
+  };
+
   return (
-    <main className="flex flex-col px-24 pt-10 overflow-hidden bg-white">
-      <div id="NAVBAR" className="navbar w-full h-fit flex justify-between w-screen -mx-24 lg:px-24 px-4">
+    <main className="flex flex-col px-4 sm:px-24 pt-2 sm:pt-10 overflow-hidden bg-white">
+      <div id="NAVBAR" className="navbar w-full h-fit flex justify-between w-screen -mx-4 sm:-mx-24 sm:px-24">
         <div className="navbar-start flex items-center gap-2">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden p-2 aspect-square">
@@ -74,35 +101,35 @@ export default function Home() {
         
 
       <div id="home" className="flex flex-col w-full gap-8 items-center [&>*]:text-center py-48">
-        <h1 className="w-fit text-8xl leading-[8rem]">Hi, My name's Lin. <br/> A freelance designer.</h1>
-        <h2 className="w-fit text-2xl">I'm dedicated to transforming your visions into reality.</h2>
+        <h1 className="w-full sm:w-fit text-4xl sm:text-8xl sm:leading-[8rem] ">Hi, My name's Lin. <br/> A freelance designer.</h1>
+        <h2 className="w-fit text-lg sm:text-2xl">I'm dedicated to transforming your visions into reality.</h2>
         <Button text="Let's Talk"></Button>
       </div>
 
-      <div className="flex justify-between gap-12 align-start px-20 pb-48">
-        <div className="flex flex-col w-[28%] items-center gap-4 [&>*]:text-center">
+      <div className="flex flex-col sm:flex-row justify-between gap-12 align-start sm:px-20 pb-48">
+        <div className="flex flex-col w-full sm:w-[28%] items-center gap-4 [&>*]:text-center">
           <h3 className="text-3xl">Share your vision</h3>
           <p>Meet with me and tell me about your business goals.</p>
         </div>
-        <div className="flex flex-col w-[28%] items-center gap-4 [&>*]:text-center">
+        <div className="flex flex-col w-full sm:w-[28%] items-center gap-4 [&>*]:text-center">
           <h3 className="text-3xl">Value your time</h3>
           <p>I'll work on your brand so you can do your business.</p>
         </div>
-        <div className="flex flex-col w-[28%] items-center gap-4 [&>*]:text-center">
+        <div className="flex flex-col w-full sm:w-[28%] items-center gap-4 [&>*]:text-center">
           <h3 className="text-3xl">Delivered on time</h3>
           <p>I work to your deadline and deliver only what you approve of.</p>
         </div>
       </div>
 
 
-      <div id="about" className="py-20 my-16">
-        <div className="flex h-[70vh]">
-          <div className="relative w-3/5 h-full">
+      <div id="about" className="py-20 my-16 flex sm:flex-row flex-col">
+        <div className="flex sm:h-[70vh]">
+          <div className="relative sm:w-3/5 h-full">
             <div className="bg-warning opacity-50 absolute top-0 -left-48 z-0 w-[75%] h-full rounded-3xl"></div>
             <Image className="z-2 absolute top-20 left-48 rounded-3xl w-[60%]  shadow-xl" src={profile}></Image>
           </div>
-          <div className="flex flex-col w-2/5 h-full justify-center gap-4 pr-[8%]">
-            <h3 className="text-6xl">About me</h3>
+          <div className="flex flex-col sm:w-2/5 h-full justify-center gap-4 pr-[8%]">
+            <h3 className="text-3xl sm:text-6xl">About me</h3>
             <p className="">Hi, I’m Lin, a dedicated freelance designer focused on helping you create a unique and compelling brand. <br /> <br /> I transform your visions into reality with stunning websites, eye-catching graphics, and robust development solutions. <br /> <br />Let’s collaborate to bring your brand to life.</p>
             <Socials size={24}/>
           </div>
@@ -231,7 +258,7 @@ export default function Home() {
           </div>
       </div>
 
-      <div id="features" className="w-screen bg-base-100 [&>*]:text-[#111418] -mx-24 my-48 px-32 py-48 flex flex-col gap-14 min-h-screen flex flex-col items-center justify-center">
+      <div id="features" className="w-screen bg-[#1E232A] [&>*]:text-[#111418] -mx-24 my-48 px-32 py-48 flex flex-col gap-14 min-h-screen flex flex-col items-center justify-center">
         <div className="flex w-full gap-10">
           <div className="flex-[5] flex flex-col gap-4 rounded-3xl shadow-xl bg-[#FEDF80] p-12">
             <h3 className="text-7xl">Transforming your ideas into stunning visuals.</h3>
@@ -321,46 +348,51 @@ export default function Home() {
         </div>
       </div> */}
 
-      <footer id="footer" className="bg-base-100 text-white px-14 pt-20 pb-10 flex flex-col justify-between gap-12 w-screen -mx-24 mt-16">
-        <div className="footer">
-          <aside className="flex flex-col gap-4">
-            <Image className="w-[12rem] object-contain" src={logo_white}></Image>
-            <Socials size={24}/>
-          </aside>
-          <nav>
-            <h6 className="footer-title">Services</h6>
-            <a className="link link-hover">Website Design</a>
-            <a className="link link-hover">Graphic Design</a>
-            <a className="link link-hover">SEO Optimization</a>
-            <a className="link link-hover">Development</a>
-          </nav>
-          <nav>
-            <h6 className="footer-title">Company</h6>
-            <a className="link link-hover">About</a>
-            <a className="link link-hover">Services</a>
-            <a className="link link-hover">Features</a>
-            <a className="link link-hover">FAQ</a>
-          </nav>
-          <form className="">
-            <h6 className="footer-title">Newsletter</h6>
-            <fieldset className="form-control">
-              <label className="label">
-                <span className="label-text">Interested in my services? <br /> Enter your email address and I'll get back to you!</span>
-              </label>
-              <div className="join">
-                <input
-                  type="text"
-                  placeholder="username@site.com"
-                  className="input input-bordered join-item" />
-                <button className="btn bg-white text-black hover:bg-[#ebf0f0] join-item">Subscribe</button>
-              </div>
-            </fieldset>
-          </form>
+<footer id="footer" className="bg-[#1E232A] text-white px-14 pt-20 pb-10 flex flex-col justify-between gap-12 w-screen -mx-24 mt-16">
+      <div className="footer">
+        <aside className="flex flex-col gap-4">
+          <Image className="w-[12rem] object-contain" src={logo_white}></Image>
+          <Socials size={24} />
+        </aside>
+        <nav>
+          <h6 className="footer-title">Services</h6>
+          <a className="link link-hover">Website Design</a>
+          <a className="link link-hover">Graphic Design</a>
+          <a className="link link-hover">SEO Optimization</a>
+          <a className="link link-hover">Development</a>
+        </nav>
+        <nav>
+          <h6 className="footer-title">Company</h6>
+          <a className="link link-hover">About</a>
+          <a className="link link-hover">Services</a>
+          <a className="link link-hover">Features</a>
+          <a className="link link-hover">FAQ</a>
+        </nav>
+        <form onSubmit={handleSubmit}>
+          <h6 className="footer-title">Newsletter</h6>
+          <fieldset className="form-control">
+            <label className="label">
+              <span className="label-text text-[#9DA3AF]">Interested in my services? <br /> Enter your email address and I'll get back to you!</span>
+            </label>
+            <div className="join">
+              <input
+                type="email"
+                placeholder="username@site.com"
+                className="input input-bordered join-item bg-transparent border-[#9DA3AF] border-opacity-25"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+              <button type="submit" className="btn bg-white text-black hover:bg-[#ebf0f0] join-item">Subscribe</button>
+            </div>
+            {message && <p>{message}</p>}
+          </fieldset>
+        </form>
       </div>
       <div className="footer">
         <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
       </div>
-      </footer>
+    </footer>
 
 
       
