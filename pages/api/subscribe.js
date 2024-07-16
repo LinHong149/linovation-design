@@ -1,11 +1,7 @@
 import axios from 'axios';
 
-// const API_USER_ID = process.env.SENDPULSE_ID;
-// const API_SECRET = process.env.SENDPULSE_SECRET;
-
-const API_USER_ID = "f2c52f9f5d0d6893c09b5c391ef94841";
-const API_SECRET = "345e9af18e59ca4e16d302bdf3283b9a";
-
+const API_USER_ID = process.env.SENDPULSE_ID;
+const API_SECRET = process.env.SENDPULSE_SECRET;
 let accessToken = null;
 let tokenExpirationTime = null;
 
@@ -39,7 +35,7 @@ export default async function handler(req, res) {
     const token = await getAccessToken();
 
     // Step 2: Create a mailing list if it doesn't exist
-    const mailingListName = 'My New Book';
+    const mailingListName = 'Website List';
     let mailingListId;
 
     // Check if the mailing list already exists

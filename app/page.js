@@ -122,8 +122,8 @@ export default function Home() {
       </div>
 
 
-      <div id="about" className="py-20 my-16 flex">
-        <div className="flex h-fit sm:h-[70vh] sm:flex-row flex-col-reverse gap-10 sm:gap-0 sm:w-full">
+      <div id="about" className="py-20 my-16 flex ">
+        <div className="flex h-fit sm:h-[70vh] sm:flex-row flex-col gap-10 sm:gap-0 sm:w-full">
           <div className="relative sm:w-3/5 h-80 sm:h-full flex justify-center">
             <div className="bg-warning opacity-50 absolute -top-5 sm:top-0 left-2 sm:-left-48 z-0 w-[80%] sm:w-[75%] h-80 sm:h-full rounded-3xl"></div>
             <Image className="z-2 absolute sm:top-20 sm:left-48 rounded-3xl w-[80%] h-80 sm:h-auto object-cover sm:w-[60%] shadow-xl" src={profile}></Image>
@@ -137,59 +137,78 @@ export default function Home() {
       </div>
 
     
-      <div id="website-design" className="py-20 my-16">
-        <div className="flex h-[70vh]">
-          <div className="flex flex-col w-2/5 h-full justify-center gap-8 pl-[8%]">
-            <div className="flex flex-col gap-4">
-              <h3 className="text-6xl">Website Design Services</h3>
-              <p className="">Transform your online presence with a custom, responsive website that captures your brand’s essence and engages your audience.</p>
+      <div id="website-design" className="relative p-0 sm:py-20 my-16 h-auto border border-gray-200 rounded-3xl shadow-lg overflow-hidden">
+        <div className="relative flex flex-col-reverse sm:flex-row sm:h-[70vh]">
+          <div className="flex flex-col w-full sm:w-2/5 h-full justify-center gap-0 sm:gap-6 px-4 py-8 sm:py-0 sm:px-16 bg-white">
+            <div className="flex flex-col gap-0 sm:gap-4">
+              <h3 className="text-3xl sm:text-5xl font-bold text-gray-800 mb-4 sm:mb-6">Website Design Services</h3>
+              <p className="hidden sm:block text-gray-600 mb-6">Transform your online presence with a custom, responsive website that captures your brand’s essence and engages your audience.</p>
             </div>
-            <div className="flex flex-col gap-4">
-              <h3 className="text-4xl">From CA$499.99</h3>
-              <p className="text-sm">Negotiable Prices</p>
+            <div className="flex flex-col gap-0 sm:gap-4">
+              <h3 className="text-xl sm:text-3xl font-semibold text-gray-800">From CA$499.99</h3>
+              <p className="text-sm sm:text-base text-gray-500 mb-4">Negotiable Prices</p>
               <Button text={"Let's Talk"}></Button>
             </div>
           </div>
-          <div className="relative w-3/5 h-full mt-12">
-          <div className="bg-secondary opacity-50 absolute top-0 -right-48 z-0 w-[75%] h-full rounded-3xl"></div>
-          <Image className="z-1 absolute top-20 right-12 rounded-3xl w-[70%] shadow-xl" src={website_design} alt="Website Design"></Image>
-          <div className="bg-base-100 absolute top-72 right-[20rem] z-2 max-w-[30rem] rounded-3xl p-12 shadow-xl">
-            <ul className="text-white list-none">
-              <li className="flex mb-2 ">
-                <input type="checkbox" id="consultation" name="consultation" checked className="checkbox checkbox-sm mt-[0.1rem] mr-[0.2rem]" />
-                <label htmlFor="consultation" className="ml-2">Free, no-commitment consultation.</label>
-              </li>
-              <li className="flex mb-2 ">
-                <input type="checkbox" id="responsive" name="responsive" checked className="checkbox checkbox-sm mt-[0.1rem] mr-[0.2rem]" />
-                <label htmlFor="responsive" className="ml-2">Responsive design for desktop, laptop, and mobile.</label>
-              </li>
-              <li className="flex mb-2 ">
-                <input type="checkbox" id="pages" name="pages" checked className="checkbox checkbox-sm mt-[0.1rem] mr-[0.2rem]" />
-                <label htmlFor="pages" className="ml-2">Up to 8 website pages.</label>
-              </li>
-              <li className="flex mb-2 ">
-                <input type="checkbox" id="seo" name="seo" checked className="checkbox checkbox-sm mt-[0.1rem] mr-[0.2rem]" />
-                <label htmlFor="seo" className="ml-2">Standard SEO set up.</label>
-              </li>
-              <li className="flex mb-2 ">
-                <input type="checkbox" id="designs" name="designs" checked className="checkbox checkbox-sm mt-[0.1rem] mr-[0.2rem]" />
-                <label htmlFor="designs" className="ml-2">Attractive designs tailored to your business.</label>
-              </li>
-              <li className="flex mb-2 ">
-                <input type="checkbox" id="prices" name="prices" checked className="checkbox checkbox-sm mt-[0.1rem] mr-[0.2rem]" />
-                <label htmlFor="prices" className="ml-2">Flexible prices.</label>
-              </li>
-              <li className="flex mb-2 ">
-                <input type="checkbox" id="iterative" name="iterative" checked className="checkbox checkbox-sm mt-[0.1rem] mr-[0.2rem]" />
-                <label htmlFor="iterative" className="ml-2">Iterative design process valuing your feedback.</label>
-              </li>
-              <li className="flex mb-2 ">
-                <input type="checkbox" id="features" name="features" checked className="checkbox checkbox-sm mt-[0.1rem] mr-[0.2rem]" />
-                <label htmlFor="features" className="ml-2">Advanced features such as video headers, image sliders, and galleries.</label>
-              </li>
-            </ul>
+          <div className="relative sm:w-3/5 h-52 sm:h-full sm:mt-0">
+            <div className="hidden sm:block bg-secondary opacity-50 absolute inset-0 transform translate-x-16 rounded-3xl z-0"></div>
+            <Image className="absolute inset-0 sm:top-20 sm:right-12 h-full sm:h-auto w-full sm:w-[70%] rounded-3xl shadow-lg object-cover z-10" src={website_design} alt="Website Design" />
+            <div className="hidden sm:block bg-[#1E232A] absolute top-1/2 transform -translate-y-1/2 right-[20rem] max-w-[30rem] rounded-3xl p-8 shadow-lg z-20">
+                <ul className="text-white list-none space-y-4">
+                  {[
+                    "Free, no-commitment consultation.",
+                    "Responsive design for desktop, laptop, and mobile.",
+                    "Up to 8 website pages.",
+                    "Standard SEO set up.",
+                    "Attractive designs tailored to your business.",
+                    "Flexible prices.",
+                    "Iterative design process valuing your feedback.",
+                    "Advanced features such as video headers, image sliders, and galleries."
+                  ].map((item, index) => (
+                    <li key={index} className="flex items-center space-x-2">
+                      <input type="checkbox" id={item.replace(/\s+/g, '-').toLowerCase()} name={item.replace(/\s+/g, '-').toLowerCase()} checked className="checkbox checkbox-sm text-blue-600 focus:ring-blue-500" />
+                      <label htmlFor={item.replace(/\s+/g, '-').toLowerCase()} className="ml-2">{item}</label>
+                    </li>
+                  ))}
+                </ul>
+              </div>
           </div>
         </div>
+      </div>
+
+
+      <div id="website-design" className="relative py-20 my-16 h-auto border border-gray-200 rounded-lg shadow-lg overflow-hidden">
+        <div className="relative flex flex-col-reverse sm:flex-row sm:h-[70vh]">
+          <div className="flex flex-col w-full sm:w-2/5 h-full justify-center gap-6 px-8 py-12 sm:py-0 sm:px-16 bg-white">
+            <h3 className="text-3xl sm:text-5xl font-bold text-gray-800 mb-4 sm:mb-6">Website Design Services</h3>
+            <p className="hidden sm:block text-gray-600 mb-6">Transform your online presence with a custom, responsive website that captures your brand’s essence and engages your audience.</p>
+            <h3 className="text-xl sm:text-3xl font-semibold text-gray-800">From CA$499.99</h3>
+            <p className="text-sm sm:text-base text-gray-500 mb-4">Negotiable Prices</p>
+            <Button text={"Let's Talk"} className="self-start px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow hover:bg-blue-700 transition duration-300" />
+          </div>
+          <div className="relative sm:w-3/5 h-52 sm:h-full mt-12 sm:mt-0">
+            <div className="hidden sm:block bg-secondary opacity-50 absolute inset-0 transform translate-x-16 rounded-3xl z-0"></div>
+            <Image className="absolute inset-0 sm:top-20 sm:right-12 h-full sm:h-auto w-full sm:w-[70%] rounded-3xl shadow-lg object-cover z-10" src={website_design} alt="Website Design" />
+            <div className="hidden sm:block bg-[#1E232A] absolute top-1/2 transform -translate-y-1/2 right-[20rem] max-w-[30rem] rounded-3xl p-8 shadow-lg z-20">
+              <ul className="text-white list-none space-y-4">
+                {[
+                  "Free, no-commitment consultation.",
+                  "Responsive design for desktop, laptop, and mobile.",
+                  "Up to 8 website pages.",
+                  "Standard SEO set up.",
+                  "Attractive designs tailored to your business.",
+                  "Flexible prices.",
+                  "Iterative design process valuing your feedback.",
+                  "Advanced features such as video headers, image sliders, and galleries."
+                ].map((item, index) => (
+                  <li key={index} className="flex items-center space-x-2">
+                    <input type="checkbox" id={item.replace(/\s+/g, '-').toLowerCase()} name={item.replace(/\s+/g, '-').toLowerCase()} checked className="checkbox checkbox-sm text-blue-600 focus:ring-blue-500" />
+                    <label htmlFor={item.replace(/\s+/g, '-').toLowerCase()} className="ml-2">{item}</label>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
 
