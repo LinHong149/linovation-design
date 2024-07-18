@@ -137,9 +137,9 @@ export default function Home() {
     
       <div id="website-design" className="relative p-0 sm:py-20 sm:w-screen sm:-mx-24 sm:px-24 my-16 h-auto border-gray-200 rounded-3xl ">
         <div className="relative flex flex-col-reverse sm:flex-row sm:h-[70vh]">
-          <div className="flex flex-col w-full sm:w-2/5 h-full justify-center gap-0 sm:gap-6 px-4 py-8 sm:py-0 sm:px-16 bg-white">
+          <div className="flex flex-col w-full sm:w-2/5 h-full justify-center gap-0 sm:gap-6 px-4 py-8 sm:py-0 bg-white">
             <div className="flex flex-col gap-0 sm:gap-4">
-              <h3 className="text-3xl sm:text-5xl font-bold text-gray-800 mb-4 sm:mb-6">Website Design Services</h3>
+              <h3 className="text-3xl sm:text-6xl font-semibold text-gray-800 mb-4 sm:mb-6">Website Design Services</h3>
               <p className="hidden sm:block text-gray-600 mb-6">Transform your online presence with a custom, responsive website that captures your brand’s essence and engages your audience.</p>
             </div>
             <div className="flex flex-col gap-0 sm:gap-4">
@@ -199,6 +199,33 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+
+      <div id="graphic-design" className="relative p-0 sm:py-20 sm:w-screen sm:-mx-24 sm:px-24 my-16 h-auto border-gray-200 rounded-3xl">
+        <div className="relative flex flex-col sm:flex-row sm:h-[70vh]">
+          <div className="relative sm:w-3/5 h-52 sm:h-full">
+            <div className="hidden sm:block bg-info opacity-75 absolute top-0 -left-48 z-0 w-[75%] h-full rounded-3xl"></div>
+            <Image className="absolute sm:top-20 sm:left-20 sm:w-[75%] rounded-3xl w-full h-full sm:h-auto object-cover shadow-xl z-1" src={graphic_design} alt="Graphic Design" />
+            <div className="hidden sm:flex bg-white absolute top-[30rem] left-52 z-2 w-fit h-fit rounded-3xl shadow-xl p-8 gap-8">
+              <Image className="w-24 aspect-square rounded-3xl shadow-xl" src={photoshop} />
+              <Image className="w-24 aspect-square rounded-3xl shadow-xl" src={figma} />
+              <Image className="w-24 aspect-square rounded-3xl shadow-xl" src={canva} />
+            </div>
+          </div>
+          <div className="flex flex-col w-full sm:w-2/5 h-full justify-center gap-0 sm:gap-6 px-4 py-8 sm:py-0 bg-white">
+            <div className="flex flex-col gap-0 sm:gap-4">
+              <h3 className="text-3xl sm:text-6xl font-semibold text-gray-800 mb-4 sm:mb-2">Graphic Design Services</h3>
+              <p className="hidden sm:block text-gray-600 mb-6">Elevate your brand’s visual identity with stunning graphics that communicate your message and leave a lasting impression.</p>
+            </div>
+            <div className="flex flex-col gap-0 sm:gap-4">
+              <h3 className="text-xl sm:text-3xl font-semibold text-gray-800">From CA$299.99</h3>
+              <p className="text-sm sm:text-base text-gray-500 mb-2">Negotiable Prices</p>
+              <Button text={"Let's Talk"} />
+            </div>
+          </div>
+        </div>
+      </div>
+
 
       <div id="seo-optimization" className="py-20 my-16">
         <div className="flex h-[70vh]">
