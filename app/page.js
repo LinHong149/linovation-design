@@ -1,7 +1,5 @@
 "use client";
 
-
-
 import { Link as ScrollLink, Element } from "react-scroll";
 import Image from "next/image";
 import { useState } from 'react';
@@ -137,7 +135,7 @@ export default function Home() {
       </div>
 
     
-      <div id="website-design" className="relative p-0 sm:py-20 my-16 h-auto border border-gray-200 rounded-3xl shadow-lg overflow-hidden">
+      <div id="website-design" className="relative p-0 sm:py-20 sm:w-screen sm:-mx-24 sm:px-24 my-16 h-auto border-gray-200 rounded-3xl ">
         <div className="relative flex flex-col-reverse sm:flex-row sm:h-[70vh]">
           <div className="flex flex-col w-full sm:w-2/5 h-full justify-center gap-0 sm:gap-6 px-4 py-8 sm:py-0 sm:px-16 bg-white">
             <div className="flex flex-col gap-0 sm:gap-4">
@@ -151,9 +149,9 @@ export default function Home() {
             </div>
           </div>
           <div className="relative sm:w-3/5 h-52 sm:h-full sm:mt-0">
-            <div className="hidden sm:block bg-secondary opacity-50 absolute inset-0 transform translate-x-16 rounded-3xl z-0"></div>
-            <Image className="absolute inset-0 sm:top-20 sm:right-12 h-full sm:h-auto w-full sm:w-[70%] rounded-3xl shadow-lg object-cover z-10" src={website_design} alt="Website Design" />
-            <div className="hidden sm:block bg-[#1E232A] absolute top-1/2 transform -translate-y-1/2 right-[20rem] max-w-[30rem] rounded-3xl p-8 shadow-lg z-20">
+            <div className="hidden sm:block bg-secondary opacity-50 absolute inset-0 transform translate-x-48 rounded-3xl z-0"></div>
+            <Image className="absolute sm:inset-32 sm:top-6 sm:right-20 h-full sm:h-auto w-full sm:w-[80%] rounded-3xl shadow-lg object-cover z-10" src={website_design} alt="Website Design" />
+            <div className="hidden sm:block bg-[#1E232A] absolute top-[95%] transform -translate-y-1/2 right-[20rem] max-w-[30rem] rounded-3xl p-8 shadow-lg z-20">
                 <ul className="text-white list-none space-y-4">
                   {[
                     "Free, no-commitment consultation.",
@@ -176,41 +174,6 @@ export default function Home() {
         </div>
       </div>
 
-
-      <div id="website-design" className="relative py-20 my-16 h-auto border border-gray-200 rounded-lg shadow-lg overflow-hidden">
-        <div className="relative flex flex-col-reverse sm:flex-row sm:h-[70vh]">
-          <div className="flex flex-col w-full sm:w-2/5 h-full justify-center gap-6 px-8 py-12 sm:py-0 sm:px-16 bg-white">
-            <h3 className="text-3xl sm:text-5xl font-bold text-gray-800 mb-4 sm:mb-6">Website Design Services</h3>
-            <p className="hidden sm:block text-gray-600 mb-6">Transform your online presence with a custom, responsive website that captures your brand’s essence and engages your audience.</p>
-            <h3 className="text-xl sm:text-3xl font-semibold text-gray-800">From CA$499.99</h3>
-            <p className="text-sm sm:text-base text-gray-500 mb-4">Negotiable Prices</p>
-            <Button text={"Let's Talk"} className="self-start px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow hover:bg-blue-700 transition duration-300" />
-          </div>
-          <div className="relative sm:w-3/5 h-52 sm:h-full mt-12 sm:mt-0">
-            <div className="hidden sm:block bg-secondary opacity-50 absolute inset-0 transform translate-x-16 rounded-3xl z-0"></div>
-            <Image className="absolute inset-0 sm:top-20 sm:right-12 h-full sm:h-auto w-full sm:w-[70%] rounded-3xl shadow-lg object-cover z-10" src={website_design} alt="Website Design" />
-            <div className="hidden sm:block bg-[#1E232A] absolute top-1/2 transform -translate-y-1/2 right-[20rem] max-w-[30rem] rounded-3xl p-8 shadow-lg z-20">
-              <ul className="text-white list-none space-y-4">
-                {[
-                  "Free, no-commitment consultation.",
-                  "Responsive design for desktop, laptop, and mobile.",
-                  "Up to 8 website pages.",
-                  "Standard SEO set up.",
-                  "Attractive designs tailored to your business.",
-                  "Flexible prices.",
-                  "Iterative design process valuing your feedback.",
-                  "Advanced features such as video headers, image sliders, and galleries."
-                ].map((item, index) => (
-                  <li key={index} className="flex items-center space-x-2">
-                    <input type="checkbox" id={item.replace(/\s+/g, '-').toLowerCase()} name={item.replace(/\s+/g, '-').toLowerCase()} checked className="checkbox checkbox-sm text-blue-600 focus:ring-blue-500" />
-                    <label htmlFor={item.replace(/\s+/g, '-').toLowerCase()} className="ml-2">{item}</label>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
 
       <div id="graphic-design" className="py-20 my-16">
         <div className="flex h-[70vh]">
