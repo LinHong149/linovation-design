@@ -175,32 +175,6 @@ export default function Home() {
       </div>
 
 
-      <div id="graphic-design" className="py-20 my-16">
-        <div className="flex h-[70vh]">
-          <div className="relative w-3/5 h-full">
-            <div className="bg-info opacity-75 absolute top-0 -left-48 z-0 w-[75%] h-full rounded-3xl"></div>
-            <Image className="z-1 absolute top-20 left-20 rounded-3xl w-[75%]  shadow-xl" src={graphic_design}></Image>
-            <div className="bg-white absolute top-[30rem] left-52 z-2 w-fit h-fit rounded-3xl shadow-xl flex p-8 gap-8">
-              <Image className="w-24 aspect-square rounded-3xl shadow-xl" src={photoshop}/>
-              <Image className="w-24 aspect-square rounded-3xl shadow-xl" src={figma}/>
-              <Image className="w-24 aspect-square rounded-3xl shadow-xl" src={canva}/>
-            </div>
-          </div>
-          <div className="flex flex-col w-2/5 h-full justify-center gap-8 pr-[8%]">
-            <div className="flex flex-col gap-4">
-              <h3 className="text-6xl">Graphic Design Services</h3>
-              <p className="">Elevate your brand’s visual identity with stunning graphics that communicate your message and leave a lasting impression.</p>
-            </div>
-            <div className="flex flex-col gap-4">
-              <h3 className="text-4xl">From CA$299.99</h3>
-              <p className="text-sm">Negotiable Prices</p>
-              <Button text={"Let's Talk"}></Button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
       <div id="graphic-design" className="relative p-0 sm:py-20 sm:w-screen sm:-mx-24 sm:px-24 my-16 h-auto border-gray-200 rounded-3xl">
         <div className="relative flex flex-col sm:flex-row sm:h-[70vh]">
           <div className="relative sm:w-3/5 h-52 sm:h-full">
@@ -246,6 +220,26 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      <div id="seo-optimization" className="relative p-0 sm:py-20 sm:w-screen sm:-mx-24 sm:px-24 my-16 h-auto border-gray-200 rounded-3xl">
+  <div className="relative flex flex-col sm:flex-row sm:h-[70vh]">
+    <div className="flex flex-col w-full sm:w-2/5 h-full justify-center gap-0 sm:gap-6 px-4 py-8 sm:py-0 sm:px-16 bg-white">
+      <div className="flex flex-col gap-0 sm:gap-4">
+        <h3 className="text-3xl sm:text-5xl font-bold text-gray-800 mb-4 sm:mb-6">SEO Optimization Services</h3>
+        <p className="hidden sm:block text-gray-600 mb-6">Boost your website’s visibility and attract more traffic with tailored SEO strategies that drive results.</p>
+      </div>
+      <div className="flex flex-col gap-0 sm:gap-4">
+        <h3 className="text-xl sm:text-3xl font-semibold text-gray-800">From CA$399.99</h3>
+        <p className="text-sm sm:text-base text-gray-500 mb-4">Negotiable Prices</p>
+        <Button text={"Let's Talk"} />
+      </div>
+    </div>
+    <div className="relative sm:w-3/5 h-52 sm:h-full">
+      <div className="hidden sm:block bg-success opacity-50 absolute top-0 -right-48 z-0 w-[75%] h-full rounded-3xl"></div>
+      <Image className="absolute sm:top-32 sm:right-12 sm:w-[75%] rounded-3xl w-full h-full object-cover shadow-xl z-1" src={seo} alt="SEO Optimization" />
+    </div>
+  </div>
+</div>
 
       <div id="development" className="py-20 my-16">
         <div className="flex h-[70vh]">
