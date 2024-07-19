@@ -221,49 +221,49 @@ export default function Home() {
         </div>
       </div>
 
-      <div id="development" className="py-20 my-16">
-        <div className="flex h-[70vh]">
-          <div className="relative w-3/5 h-full">
-            <div className="bg-error opacity-75 absolute top-0 -left-48 z-0 w-[75%] h-full rounded-3xl"></div>
-            <Image className="z-1 absolute top-20 left-20 rounded-3xl w-[75%] aspect-[5/4] object-cover object-bottom shadow-xl" src={development}></Image>
+      <div id="development" className="relative p-0 sm:py-20 sm:w-screen sm:-mx-24 sm:px-24 my-16 h-auto border-gray-200 rounded-3xl">
+        <div className="relative flex flex-col sm:flex-row sm:h-[70vh]">
+          <div className="relative sm:w-3/5 h-52 sm:h-full">
+            <div className="hidden sm:block bg-error opacity-75 absolute top-0 -left-48 z-0 w-[75%] h-full rounded-3xl"></div>
+            <Image className="absolute sm:top-20 sm:left-20 sm:w-[75%] rounded-3xl w-full h-full sm:aspect-[5/4] sm:h-auto object-cover object-center sm:object-bottom  shadow-xl z-1" src={development} alt="Development Services" />
           </div>
-          <div className="flex flex-col w-2/5 h-full justify-center gap-8 pr-[8%]">
-            <div className="flex flex-col gap-4">
-              <h3 className="text-6xl">Development Services</h3>
-              <p className="">Bring your ideas to life with robust, scalable development solutions that meet your business needs and exceed expectations.</p>
+          <div className="flex flex-col w-full sm:w-2/5 h-full justify-center gap-0 sm:gap-6 px-4 py-8 sm:py-0 sm:px-16 bg-white">
+            <div className="flex flex-col gap-0 sm:gap-4">
+              <h3 className="text-3xl sm:text-5xl font-bold text-gray-800 mb-4 sm:mb-6">Development Services</h3>
+              <p className="hidden sm:block text-gray-600 mb-6">Bring your ideas to life with robust, scalable development solutions that meet your business needs and exceed expectations.</p>
             </div>
-            <div className="flex flex-col gap-4">
-              <h3 className="text-4xl">From CA$799.99</h3>
-              <p className="text-sm">Negotiable Prices</p>
-              <Button text={"Let's Talk"}></Button>
+            <div className="flex flex-col gap-0 sm:gap-4">
+              <h3 className="text-xl sm:text-3xl font-semibold text-gray-800">From CA$799.99</h3>
+              <p className="text-sm sm:text-base text-gray-500 mb-4">Negotiable Prices</p>
+              <Button text={"Let's Talk"} />
             </div>
           </div>
-          </div>
+        </div>
       </div>
 
-      <div id="features" className="w-screen bg-[#1E232A] [&>*]:text-[#111418] -mx-24 my-48 px-32 py-48 flex flex-col gap-14 min-h-screen flex flex-col items-center justify-center">
-        <div className="flex w-full gap-10">
-          <div className="flex-[5] flex flex-col gap-4 rounded-3xl shadow-xl bg-[#FEDF80] p-12">
-            <h3 className="text-7xl">Transforming your ideas into stunning visuals.</h3>
+      <div id="features" className="w-screen bg-[#1E232A] text-[#111418] -mx-4 sm:-mx-24 my-48 sm:px-32 sm:py-48 px-4 py-24 flex flex-col gap-14 min-h-screen items-center justify-center">
+        <div className="flex flex-col sm:flex-row w-full gap-10">
+          <div className="flex-1 flex sm:flex-[5] flex-col gap-4 rounded-3xl shadow-xl bg-[#FEDF80] p-8 sm:p-12">
+            <h3 className="text-3xl sm:text-7xl">Transforming your ideas into stunning visuals.</h3>
           </div>
-          <div className="flex-[3] flex flex-col gap-4 rounded-3xl shadow-xl bg-[#FF9EEC] p-12">
-            <h3 className="text-5xl">Timely delivery</h3>
+          <div className="flex-1 flex flex-col sm:flex-[3] gap-4 rounded-3xl shadow-xl bg-[#FF9EEC] p-8 sm:p-12">
+            <h3 className="text-2xl sm:text-5xl">Timely delivery</h3>
             <p>Ensuring your projects are completed on time, every time.</p>
-            <Button text={"Chat Anytime"}></Button>
+            <Button text={"Chat Anytime"} />
           </div>
         </div>
 
-        <div className="flex w-full gap-10">
-          <div className="flex-1 flex flex-col gap-4 rounded-3xl shadow-xl bg-[#3EC7FF] p-12">
-            <h3 className="text-5xl">Affordable Rates</h3>
+        <div className="flex flex-col sm:flex-row w-full gap-10">
+          <div className="flex-1 flex flex-col gap-4 rounded-3xl shadow-xl bg-[#3EC7FF] p-8 sm:p-12">
+            <h3 className="text-2xl sm:text-5xl">Affordable Rates</h3>
             <p>Premium design services that won't break the bank.</p>
           </div>
-          <div className="flex-1 flex flex-col gap-4 rounded-3xl shadow-xl bg-[#8ED6B7] p-12">
-            <h3 className="text-5xl">Versatile Expertise</h3>
+          <div className="flex-1 flex flex-col gap-4 rounded-3xl shadow-xl bg-[#8ED6B7] p-8 sm:p-12">
+            <h3 className="text-2xl sm:text-5xl">Versatile Expertise</h3>
             <p>Expertise across various design disciplines to meet your unique needs.</p>
           </div>
-          <div className="flex-1 flex flex-col gap-4 rounded-3xl shadow-xl bg-[#FF7B8A] p-12">
-            <h3 className="text-5xl">Feedback Process</h3>
+          <div className="flex-1 flex flex-col gap-4 rounded-3xl shadow-xl bg-[#FF7B8A] p-8 sm:p-12">
+            <h3 className="text-2xl sm:text-5xl">Feedback Process</h3>
             <p>An iterative process that values your input at every stage.</p>
           </div>
         </div>
