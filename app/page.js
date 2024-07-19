@@ -269,17 +269,18 @@ export default function Home() {
         </div>
       </div>
 
-      <div id="faq" className="w-full flex flex-col items-center py-24 m-10 gap-16">
-        <h2 className="text-4xl w-fit">Frequently Asked Questions</h2>
 
-        <div className="flex flex-col gap-6 w-[50%] min-w-[50rem]">
+      <div id="faq" className="w-full flex flex-col items-center py-24 sm:m-10 gap-16">
+        <h2 className="text-3xl sm:text-4xl w-fit text-center">Frequently Asked Questions</h2>
+
+        <div className="flex flex-col gap-6 w-full sm:w-[50%] min-w-[20rem] sm:min-w-[50rem] px-4 sm:px-0">
           <Dropdown defaultChecked={false} 
             question={"What is the process for starting a project with you?"} 
             answer={"We begin with a free consultation to discuss your needs and goals. Once we agree on the project scope and terms, I’ll provide a detailed proposal and timeline. After approval, we kick off the design and development phases, with regular updates and feedback sessions."}></Dropdown>
           <hr className="w-full border-neutral" />
           <Dropdown defaultChecked={false} 
             question={"How long does it take to design and develop a website?"} 
-            answer={"The timeline depends on the complexity and features of the website. Typically, a simple 1 page website takes about 2 week from initial consultation to launch, including design, development, and revisions. More complicated websites including photography appointments and multiple pages may take 3-6 weeks."}></Dropdown>
+            answer={"The timeline depends on the complexity and features of the website. Typically, a simple 1 page website takes about 2 weeks from initial consultation to launch, including design, development, and revisions. More complicated websites including photography appointments and multiple pages may take 3-6 weeks."}></Dropdown>
           <hr className="w-full border-neutral" />
           <Dropdown defaultChecked={false} 
             question={"Can you help with branding and logo design?"} 
@@ -303,79 +304,51 @@ export default function Home() {
         </div>
       </div>
 
-      {/* <div id="contact" className="w-full p-20 h-screen justify-center flex flex-col items-center gap-16">
-        <h3 className="text-4xl">Ready to get started?</h3>
-        <div className="flex gap-10">
-
-          <div className="card bg-info bg-opacity-50 w-[24rem] shadow-xl px-6 py-6">
-            <div className="card-body items-center text-center">
-              <h2 className="text-2xl">Call me</h2>
-              <p className="text-lg">Give me a call if you're interested or have questions.</p>
-              <a href="Tel:14374235052" className="flex gap-2 p-4">
-                <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" focusable="false" api="[object Object]" class="sm-mr--quarter icon--phone-icon-24x24"><path d="M16.91,22h-.15a10.32,10.32,0,0,1-4.44-1.26,20.25,20.25,0,0,1-9-9A9.73,9.73,0,0,1,2,7,3.73,3.73,0,0,1,3,4.53c.65-.69,1.17-1.22,1.7-1.71a2.73,2.73,0,0,1,3.81-.08,34.86,34.86,0,0,1,2.66,2.65,2.74,2.74,0,0,1,0,3.72c-.33.36-.64.68-.95,1a10.64,10.64,0,0,0,2.07,2.4,14.41,14.41,0,0,0,1.43,1.08l.27.2c.25-.26.5-.49.74-.72A2.85,2.85,0,0,1,18.75,13c.73.67,1.52,1.45,2.39,2.38a2.78,2.78,0,0,1,0,4h0C20.57,20,20,20.52,19.48,21A3.82,3.82,0,0,1,16.91,22ZM6.64,4A.92.92,0,0,0,6,4.3c-.47.44-1,.94-1.59,1.6A1.73,1.73,0,0,0,4,7.09a8,8,0,0,0,1,3.77A18.36,18.36,0,0,0,13.23,19a8.3,8.3,0,0,0,3.53,1h.11a1.8,1.8,0,0,0,1.27-.46c.49-.46,1-1,1.54-1.54a.81.81,0,0,0,0-1.29c-.83-.88-1.59-1.63-2.29-2.27a.86.86,0,0,0-.63-.31,1,1,0,0,0-.7.36,12.67,12.67,0,0,0-1,1,1.38,1.38,0,0,1-1.88.23l-.68-.48A18.84,18.84,0,0,1,10.92,14a13,13,0,0,1-2.68-3.23,1.43,1.43,0,0,1,.29-1.89A13.75,13.75,0,0,0,9.61,7.79a.72.72,0,0,0,0-1.07,30.8,30.8,0,0,0-2.5-2.49A.72.72,0,0,0,6.64,4Z"></path></svg>
-                437-423-5052
-              </a>
-            </div>
-          </div>
-
-          <div className="card bg-warning bg-opacity-50 w-[24rem] shadow-xl px-6 py-6">
-            <div className="card-body items-center text-center">
-              <h2 className="text-2xl">Email me</h2>
-              <p className="text-lg">Feel free to email me for inquiries or more information.</p>
-              <a href="https://mail.google.com/mail/u/0/?fs=1&to=lin@linovationdesign.com&su=&body=&bcc=&tf=cm" className="flex gap-2 p-4 link link-hover">
-                <svg width="22" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" focusable="false"><path d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"/></svg>
-                lin@linovationdesign.com
-              </a>
-            </div>
-          </div>
+      <footer id="footer" className="bg-[#1E232A] text-white px-6 sm:px-20 pt-20 pb-10 flex flex-col justify-between gap-12 w-screen -mx-4 sm:-mx-24 mt-16">
+        <div className="footer flex flex-col sm:flex-row flex-wrap justify-between gap-12 w-full">
+          <aside className="flex flex-col gap-4 w-full sm:w-auto">
+            <Image className="w-[12rem] object-contain" src={logo_white} alt="Logo" />
+            <Socials size={24} />
+          </aside>
+          <nav className="w-full sm:w-auto">
+            <h6 className="footer-title text-white">Services</h6>
+            <a className="link link-hover">Website Design</a>
+            <a className="link link-hover">Graphic Design</a>
+            <a className="link link-hover">SEO Optimization</a>
+            <a className="link link-hover">Development</a>
+          </nav>
+          <nav className="w-full sm:w-auto">
+            <h6 className="footer-title text-white">Company</h6>
+            <a className="link link-hover">About</a>
+            <a className="link link-hover">Services</a>
+            <a className="link link-hover">Features</a>
+            <a className="link link-hover">FAQ</a>
+          </nav>
+          <form className="w-full sm:w-fit" onSubmit={handleSubmit}>
+            <h6 className="footer-title text-white ">Newsletter</h6>
+            <fieldset className="form-control">
+              <label className="label">
+                <span className="label-text text-[#9DA3AF]">Interested in my services? <br /> Enter your email address and I'll get back to you!</span>
+              </label>
+              <div className="join flex flex-col sm:flex-row gap-4 sm:gap-0">
+                <input
+                  type="email"
+                  placeholder="username@site.com"
+                  className="input input-bordered sm:join-item bg-transparent border-[#9DA3AF] border-opacity-25 flex-grow"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                />
+                <button type="submit" className="btn bg-white text-black hover:bg-[#ebf0f0] sm:join-item w-full sm:w-auto">Subscribe</button>
+              </div>
+              {message && <p className="mt-2 text-[#9DA3AF]">{message}</p>}
+            </fieldset>
+          </form>
         </div>
-      </div> */}
-
-<footer id="footer" className="bg-[#1E232A] text-white px-14 pt-20 pb-10 flex flex-col justify-between gap-12 w-screen -mx-24 mt-16">
-      <div className="footer">
-        <aside className="flex flex-col gap-4">
-          <Image className="w-[12rem] object-contain" src={logo_white}></Image>
-          <Socials size={24} />
-        </aside>
-        <nav>
-          <h6 className="footer-title">Services</h6>
-          <a className="link link-hover">Website Design</a>
-          <a className="link link-hover">Graphic Design</a>
-          <a className="link link-hover">SEO Optimization</a>
-          <a className="link link-hover">Development</a>
-        </nav>
-        <nav>
-          <h6 className="footer-title">Company</h6>
-          <a className="link link-hover">About</a>
-          <a className="link link-hover">Services</a>
-          <a className="link link-hover">Features</a>
-          <a className="link link-hover">FAQ</a>
-        </nav>
-        <form onSubmit={handleSubmit}>
-          <h6 className="footer-title">Newsletter</h6>
-          <fieldset className="form-control">
-            <label className="label">
-              <span className="label-text text-[#9DA3AF]">Interested in my services? <br /> Enter your email address and I'll get back to you!</span>
-            </label>
-            <div className="join">
-              <input
-                type="email"
-                placeholder="username@site.com"
-                className="input input-bordered join-item bg-transparent border-[#9DA3AF] border-opacity-25"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-              />
-              <button type="submit" className="btn bg-white text-black hover:bg-[#ebf0f0] join-item">Subscribe</button>
-            </div>
-            {message && <p>{message}</p>}
-          </fieldset>
-        </form>
-      </div>
-      <div className="footer">
-        <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
-      </div>
-    </footer>
+        <div className="footer w-full text-center sm:text-left">
+          <p>Copyright © {new Date().getFullYear()} - All rights reserved</p>
+        </div>
+      </footer>
 
 
       
