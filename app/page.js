@@ -143,7 +143,7 @@ export default function Home() {
               <p className="hidden sm:block text-gray-600 mb-6">Transform your online presence with a custom, responsive website that captures your brand’s essence and engages your audience.</p>
             </div>
             <div className="flex flex-col gap-0 sm:gap-4">
-              <h3 className="text-xl sm:text-3xl font-semibold text-gray-800">From CA$499.99</h3>
+              <h3 className="text-xl sm:text-3xl font-semibold text-gray-800">From CA$400</h3>
               <p className="text-sm sm:text-base text-gray-500 mb-4">Negotiable Prices</p>
               <Button text={"Let's Talk"}></Button>
             </div>
